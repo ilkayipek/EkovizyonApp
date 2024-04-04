@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAhXKUApGd5UyWPVVNgkFLqTOf4K9FYxRk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>211371976575</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ilkayipek.SurdurulebilirMahalleler</string>
+	<key>PROJECT_ID</key>
+	<string>surdurulebilir-mahalleler</string>
+	<key>STORAGE_BUCKET</key>
+	<string>surdurulebilir-mahalleler.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:211371976575:ios:fa8e2a414b752b3c961c4a</string>
+</dict>
+</plist>
