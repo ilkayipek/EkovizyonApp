@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyAhXKUApGd5UyWPVVNgkFLqTOf4K9FYxRk</string>
+	<string>AIzaSyBabYShFUY4uljkK0Vg8OrQw6KjEY7tiag</string>
 	<key>GCM_SENDER_ID</key>
-	<string>211371976575</string>
+	<string>242321392845</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.ilkayipek.SurdurulebilirMahalleler</string>
 	<key>PROJECT_ID</key>
-	<string>surdurulebilir-mahalleler</string>
+	<string>surdurulebilir-mahallele-f8f71</string>
 	<key>STORAGE_BUCKET</key>
-	<string>surdurulebilir-mahalleler.appspot.com</string>
+	<string>surdurulebilir-mahallele-f8f71.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:211371976575:ios:fa8e2a414b752b3c961c4a</string>
+	<string>1:242321392845:ios:96addaded3cb240e6a9584</string>
 </dict>
 </plist>
