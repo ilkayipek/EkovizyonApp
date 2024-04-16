@@ -48,6 +48,20 @@ class BaseViewController<V: BaseViewModel>: UIViewController {
             guard let self else {return}
             self.failAnimation(text: text)
         }
+        
+        viewModel?.alertMessage = { [weak self] (alertMessage, alertTitle, actionTitle) in
+            guard let self else {return}
+            self.alertMessageDefault(alertTitle: alertTitle, alertMessage: alertMessage, actionTitle: actionTitle)
+        }
+    }
+    
+    func alertMessageDefault(alertTitle: String, alertMessage: String, actionTitle: String) {
+        let alertTitle = NSLocalizedString(alertTitle, comment: "")
+        let alertMessage = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        let actionTitle = NSLocalizedString(actionTitle, comment: "")
+        let action = UIAlertAction(title: actionTitle, style:.default)
+        alertMessage.addAction(action)
+        present(alertMessage, animated: true)
     }
     
     func loadingAnimationStart(text: String) {
