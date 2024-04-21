@@ -19,6 +19,11 @@ class Network {
         database.settings = settings
     }
     
+    func refCreate(collection: FirebaseCollections,uid: String) -> DocumentReference {
+        return database.collection(collection.rawValue).document(uid)
+    }
+    
+    
 }
 
 extension Network {
@@ -76,10 +81,24 @@ extension Network {
         }
     }
     
+    func getDocument<T: Decodable>(reference: DocumentReference, completion: @escaping (Result<T, Error>) -> Void) {
+        reference.getDocument { documentSnapshot, error in
+            
+            guard let data = try? documentSnapshot?.data(as: T.self) else {
+                let error = NSError(domain: "Firestore", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode document"])
+                completion(.failure(error))
+                return
+            }
+            completion(.success(data))
+        }
+    }
+
+
+
+    
     func post<T: FirebaseIdentifiable>(_ value: T, to collection: FirebaseCollections.RawValue, completion: @escaping (Result<T, Error>) -> Void) {
-        let ref = database.collection(collection).document()
-        var valueToWrite: T = value
-        valueToWrite.id = ref.documentID
+        let valueToWrite: T = value
+        let ref = database.collection(collection).document(value.id)
         
         do {
             try ref.setData(from: valueToWrite) { error in
