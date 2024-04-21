@@ -14,7 +14,7 @@ enum FirebaseCollections: String {
     case follows = "Follows"
     case userProducts = "UserProducts"
     case users = "Users"
-    case userDetail = "UserDetail"
+    case userDetails = "UserDetails"
     case eventParticipants = "EventParticipants"
     case locations = "Locations"
     case events = "Events"
