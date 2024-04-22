@@ -9,4 +9,5 @@ import Foundation
 
 enum DocumentError: Error {
     case documentNotFound
+    case documentIsNil
 }
