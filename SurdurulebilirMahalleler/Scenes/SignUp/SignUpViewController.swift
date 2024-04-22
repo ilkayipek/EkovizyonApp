@@ -32,7 +32,7 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
     }
     
     func transitionSignUpWithEmailVc() {
-        let targetVc = SignUpWihEmailViewController.loadFromNib()
+        let targetVc = SignUpWithEmailViewController.loadFromNib()
         self.navigationController?.pushViewController(targetVc, animated: true)
     }
     
