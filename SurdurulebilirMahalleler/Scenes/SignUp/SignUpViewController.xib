@@ -71,7 +71,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="signUpWithEmail:" destination="-1" eventType="touchUpInside" id="MgS-M9-wLQ"/>
+                                <action selector="signUpWithEmailClicked:" destination="-1" eventType="touchUpInside" id="2gT-Cz-XeG"/>
                             </connections>
                         </button>
                     </subviews>
