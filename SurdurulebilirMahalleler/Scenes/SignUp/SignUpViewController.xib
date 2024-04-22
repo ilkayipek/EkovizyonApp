@@ -70,6 +70,9 @@
                                     <color key="value" name="PrimaryText"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signUpWithEmail:" destination="-1" eventType="touchUpInside" id="MgS-M9-wLQ"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
