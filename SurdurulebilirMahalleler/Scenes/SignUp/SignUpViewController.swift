@@ -13,4 +13,27 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
         super.viewDidLoad()
         viewModel = SignUpViewModel()
     }
+    
+    @IBAction func signUpWithGoogleClicked(_ sender: Any) {
+        viewModel?.signUpWithGoogle(controller: self) { [weak self] result in
+            guard let self else {return}
+            guard result else {return}
+            self.transitionToFeedVc()
+        }
+    }
+    @IBAction func signUpWithEmailClicked(_ sender: Any) {
+        transitionSignUpWithEmailVc()
+    }
+    
+    func transitionToFeedVc() {
+        let targetVc = FeedViewController.loadFromNib()
+        targetVc.modalPresentationStyle = .fullScreen
+        self.present(targetVc, animated: true)
+    }
+    
+    func transitionSignUpWithEmailVc() {
+        let targetVc = SignUpWihEmailViewController.loadFromNib()
+        self.navigationController?.pushViewController(targetVc, animated: true)
+    }
+    
 }
