@@ -20,9 +20,37 @@ class SignUpWithEmailViewController: BaseViewController<SignUpWithEmailViewModel
     }
 
     @IBAction func createAccountClicked(_ sender: Any) {
+        let password = passwordTextField.text ?? ""
+        let againPassword = againPaswordTextField.text ?? ""
+        let name = fullNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        
+        if isPasswordEqual(password, againPassword) {
+            viewModel?.signUp(name, email, password){ [weak self] status in
+                guard let self else {return}
+                
+                if status {
+                    self.successCreateAccount()
+                }
+            }
+        } else {
+            failAnimation(text: "şifreler uyuşmuyor!")
+        }
+        
     }
     
     @IBAction func existingAccountClicked(_ sender: Any) {
+    }
+    
+    func successCreateAccount() {
+        let targetVc = FeedViewController.loadFromNib()
+        targetVc.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(targetVc, animated: true)
+    }
+    
+    func isPasswordEqual(_ password: String, _ passwordAgain: String) ->Bool {
+        guard password == passwordAgain else {return false }
+        return true
     }
     
 }
