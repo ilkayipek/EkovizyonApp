@@ -76,32 +76,35 @@
                         </button>
                     </subviews>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGy-oV-U08">
-                    <rect key="frame" x="82.666666666666686" y="745.66666666666663" width="228" height="22.333333333333371"/>
-                    <attributedString key="attributedText">
-                        <fragment content="Mevcut Hesaba Giriş Yap">
-                            <attributes>
-                                <color key="NSColor" name="PrimaryText"/>
-                                <font key="NSFont" size="17" name="Futura-Bold"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YP9-oU-evj">
+                    <rect key="frame" x="10" y="731.66666666666663" width="373" height="36.333333333333371"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Mevcut Hesaba Giriş Yap">
+                        <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                        <color key="baseForegroundColor" name="PrimaryText"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="existingAccountClicked:" destination="-1" eventType="touchUpInside" id="Cz3-rb-DgU"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="YP9-oU-evj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="4No-g8-nRo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gvH-1a-Z2H" secondAttribute="trailing" constant="30" id="4WN-XI-9aP"/>
-                <constraint firstItem="wGy-oV-U08" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8fa-F7-9XG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wGy-oV-U08" secondAttribute="bottom" constant="50" id="Bzf-Jc-TXV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YP9-oU-evj" secondAttribute="trailing" constant="10" id="D9L-ih-gn5"/>
                 <constraint firstItem="gvH-1a-Z2H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Kfi-WN-Hus"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YP9-oU-evj" secondAttribute="bottom" constant="50" id="Uvb-tY-dW8"/>
                 <constraint firstItem="gvH-1a-Z2H" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wrn-8E-B98"/>
             </constraints>
             <point key="canvasLocation" x="137" y="20"/>
         </view>
     </objects>
     <designables>
+        <designable name="Lpu-3A-rS2">
+            <size key="intrinsicContentSize" width="186" height="35"/>
+        </designable>
         <designable name="uL1-OD-eBp">
             <size key="intrinsicContentSize" width="225.33333333333334" height="35.333333333333336"/>
         </designable>
@@ -112,7 +115,7 @@
             <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="PrimaryText">
-            <color red="0.37254902719999999" green="0.58431375029999999" blue="0.8156862855" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.37299999594688416" green="0.58399999141693115" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
