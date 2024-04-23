@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="gvH-1a-Z2H">
+                    <rect key="frame" x="30" y="355" width="333" height="142.33333333333337"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kayıt Ol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfQ-Y1-OKZ">
+                            <rect key="frame" x="0.0" y="0.0" width="333" height="36"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL1-OD-eBp" customClass="CustomUIButton" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="54" width="333" height="35.333333333333343"/>
+                            <color key="backgroundColor" name="ButtonBackground"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="googleIcon" title=" Google ile devam et" subtitle="">
+                                <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                <color key="baseForegroundColor" name="PrimaryText"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="PrimaryText"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signUpWithGoogleClicked:" destination="-1" eventType="touchUpInside" id="V5h-e3-Pz2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpu-3A-rS2" customClass="CustomUIButton" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="107.33333333333331" width="333" height="35"/>
+                            <color key="backgroundColor" name="ButtonBackground"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="E-mail ile devam et">
+                                <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                <color key="baseForegroundColor" name="PrimaryText"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="PrimaryText"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signUpWithEmailClicked:" destination="-1" eventType="touchUpInside" id="2gT-Cz-XeG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YP9-oU-evj">
+                    <rect key="frame" x="10" y="731.66666666666663" width="373" height="36.333333333333371"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Mevcut Hesaba Giriş Yap">
+                        <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                        <color key="baseForegroundColor" name="PrimaryText"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="existingAccountClicked:" destination="-1" eventType="touchUpInside" id="Cz3-rb-DgU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="YP9-oU-evj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="4No-g8-nRo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gvH-1a-Z2H" secondAttribute="trailing" constant="30" id="4WN-XI-9aP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YP9-oU-evj" secondAttribute="trailing" constant="10" id="D9L-ih-gn5"/>
+                <constraint firstItem="gvH-1a-Z2H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Kfi-WN-Hus"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YP9-oU-evj" secondAttribute="bottom" constant="50" id="Uvb-tY-dW8"/>
+                <constraint firstItem="gvH-1a-Z2H" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wrn-8E-B98"/>
+            </constraints>
+            <point key="canvasLocation" x="137" y="20"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Lpu-3A-rS2">
+            <size key="intrinsicContentSize" width="186" height="35"/>
+        </designable>
+        <designable name="uL1-OD-eBp">
+            <size key="intrinsicContentSize" width="225.33333333333334" height="35.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="googleIcon" width="21.333333969116211" height="21.333333969116211"/>
+        <namedColor name="ButtonBackground">
+            <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="PrimaryText">
+            <color red="0.37299999594688416" green="0.58399999141693115" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
