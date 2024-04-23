@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpWithEmailViewController" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
             <connections>
-                <outlet property="againPaswordTextField" destination="Jeg-nN-bwH" id="YZp-DP-lU2"/>
                 <outlet property="emailTextField" destination="XPJ-Tv-nfX" id="6tj-8C-frR"/>
                 <outlet property="fullNameTextField" destination="UIq-fO-weJ" id="lgf-Tu-sg9"/>
                 <outlet property="passwordTextField" destination="kLT-mD-Gvs" id="o65-xv-iee"/>
@@ -23,19 +22,22 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-8O-2sV">
-                    <rect key="frame" x="10" y="171.33333333333337" width="382" height="248"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-8O-2sV">
+                    <rect key="frame" x="10" y="189.33333333333337" width="373" height="280"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabını Oluştur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAR-Kt-gi1">
-                            <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="40"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad Soyad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIq-fO-weJ" customClass="CustomUITextField" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="55" width="382" height="34"/>
+                            <rect key="frame" x="0.0" y="60" width="373" height="40"/>
                             <color key="backgroundColor" name="LabelBackgroung"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Q9S-pj-QSd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
@@ -47,10 +49,10 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPJ-Tv-nfX" customClass="CustomUITextField" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="107.99999999999997" width="382" height="34"/>
+                            <rect key="frame" x="0.0" y="119.99999999999997" width="373" height="40"/>
                             <color key="backgroundColor" name="LabelBackgroung"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" textContentType="email"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
                                     <real key="value" value="15"/>
@@ -61,10 +63,10 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLT-mD-Gvs" customClass="CustomUITextField" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="160.99999999999997" width="382" height="34"/>
+                            <rect key="frame" x="0.0" y="179.99999999999997" width="373" height="40"/>
                             <color key="backgroundColor" name="LabelBackgroung"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
                                     <real key="value" value="15"/>
@@ -74,11 +76,11 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre Tekrar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jeg-nN-bwH" customClass="CustomUITextField" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="213.99999999999997" width="382" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre Tekrar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYt-0G-BI3" customClass="CustomUITextField" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="240" width="373" height="40"/>
                             <color key="backgroundColor" name="LabelBackgroung"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
                                     <real key="value" value="15"/>
@@ -95,7 +97,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezt-zA-stx" customClass="CustomUIButton" customModule="SurdurulebilirMahalleler">
                             <rect key="frame" x="0.0" y="0.0" width="373" height="35"/>
-                            <color key="backgroundColor" name="InactiveButtonColor"/>
+                            <color key="backgroundColor" name="ActiveButtonColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Oluştur" subtitle="">
                                 <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
@@ -121,6 +123,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Mevcut Hesaba Giriş Yap">
                                 <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <color key="baseForegroundColor" name="PrimaryText"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="existingAccountClicked:" destination="-1" eventType="touchUpInside" id="Jue-qW-hJV"/>
@@ -136,40 +139,47 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="v3c-lL-03b" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0Zm-jE-NLU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rBs-8O-2sV" secondAttribute="trailing" constant="1" id="7fZ-Gr-rYm"/>
+                <constraint firstItem="rBs-8O-2sV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="4ce-B4-8ku"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rBs-8O-2sV" secondAttribute="trailing" constant="10" id="7fZ-Gr-rYm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="v3c-lL-03b" secondAttribute="bottom" constant="10" id="8o2-YW-5fA"/>
                 <constraint firstItem="v3c-lL-03b" firstAttribute="top" secondItem="cLS-e3-7dl" secondAttribute="bottom" id="BKf-jh-dms"/>
+                <constraint firstItem="cLS-e3-7dl" firstAttribute="top" secondItem="rBs-8O-2sV" secondAttribute="bottom" priority="999" constant="150" id="FBC-fX-LDy"/>
                 <constraint firstItem="rBs-8O-2sV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Gk1-st-DeX"/>
+                <constraint firstItem="cLS-e3-7dl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rBs-8O-2sV" secondAttribute="bottom" constant="50" id="JOs-eY-eS4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cLS-e3-7dl" secondAttribute="trailing" constant="10" id="PfC-3C-fho"/>
                 <constraint firstItem="v3c-lL-03b" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="Pfa-Jv-bNG"/>
-                <constraint firstItem="cLS-e3-7dl" firstAttribute="top" secondItem="rBs-8O-2sV" secondAttribute="bottom" constant="200" id="cVF-Y4-NCE"/>
                 <constraint firstItem="cLS-e3-7dl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="rfp-zc-gTC"/>
                 <constraint firstItem="v3c-lL-03b" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" id="ruZ-lz-4BT"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4ce-B4-8ku"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="-2.2900763358778624" y="19.718309859154932"/>
         </view>
     </objects>
     <designables>
-        <designable name="Jeg-nN-bwH">
-            <size key="intrinsicContentSize" width="102.33333333333333" height="34"/>
+        <designable name="AYt-0G-BI3">
+            <size key="intrinsicContentSize" width="127.66666666666667" height="34"/>
         </designable>
         <designable name="UIq-fO-weJ">
-            <size key="intrinsicContentSize" width="100" height="34"/>
+            <size key="intrinsicContentSize" width="111.33333333333333" height="34"/>
         </designable>
         <designable name="XPJ-Tv-nfX">
-            <size key="intrinsicContentSize" width="79" height="34"/>
+            <size key="intrinsicContentSize" width="97.333333333333329" height="34"/>
         </designable>
         <designable name="ezt-zA-stx">
             <size key="intrinsicContentSize" width="87" height="35"/>
         </designable>
         <designable name="kLT-mD-Gvs">
-            <size key="intrinsicContentSize" width="58" height="34"/>
+            <size key="intrinsicContentSize" width="68.666666666666671" height="34"/>
         </designable>
     </designables>
     <resources>
         <image name="PrimaryIcon" width="166.66667175292969" height="166.66667175292969"/>
-        <namedColor name="InactiveButtonColor">
-            <color red="0.5690000057220459" green="0.5690000057220459" blue="0.5690000057220459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="ActiveButtonColor">
+            <color red="0.2669999897480011" green="0.57599997520446777" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="LabelBackgroung">
             <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
