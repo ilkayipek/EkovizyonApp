@@ -69,14 +69,42 @@ class AuthManager {
             }
         }
     }
+    
+    func signUpWithEmail(_ fullName: String,_ email: String,_ password: String,_ closure: @escaping (Bool,Error?) -> Void) {
+        auth.createUser(withEmail: email, password: password) { [weak self] result, error in
+            guard let self else {return}
+            
+            if let user = result?.user{
+                
+                self.createUserDocuments(firebaseUser: user, fullName: fullName) { status, error in
+                    if status {
+                        self.signInWithEmail(email, password, closure)
+                    }
+                }
+                
+            } else {
+                closure(false,error)
+            }
+        }
+    }
+    
+    func signInWithEmail(_ email: String,_ password: String,_ closure: @escaping (Bool,Error?) -> Void ) {
+        auth.signIn(withEmail: email, password: password) { authResult, error in
+            if authResult?.user != nil {
+                closure(true, nil)
+            } else {
+                closure(false, error)
+            }
+        }
+    }
 }
 
 //MARK: Document Post functions
 extension AuthManager {
-    private func createUserDocuments(firebaseUser: User,_ closure: @escaping (Bool,Error?) -> Void) {
+    private func createUserDocuments(firebaseUser: User,fullName: String = "",_ closure: @escaping (Bool,Error?) -> Void) {
         let id = firebaseUser.uid
         let url = firebaseUser.photoURL?.absoluteString ?? ""
-        let fullName = firebaseUser.displayName ?? ""
+        let fullName = firebaseUser.displayName ?? fullName
         let username = "".generateUsername(length: 15)
         
         
@@ -87,7 +115,7 @@ extension AuthManager {
                 closure(false,error)
                 
             } else if let pointDetailRef {
-                self.createUserDetailModelDocument(username: username,pointRef: pointDetailRef, firebaseUser: firebaseUser) { (userDetailRef, error) in
+                self.createUserDetailModelDocument(username: username,fullName: fullName,pointRef: pointDetailRef, firebaseUser: firebaseUser) { (userDetailRef, error) in
                     if let error {
                         closure(false, error)
                     } else if let userDetailRef {
@@ -115,13 +143,13 @@ extension AuthManager {
         }
     }
     
-    private func createUserDetailModelDocument(username: String, pointRef: DocumentReference,firebaseUser: User,_ closure: @escaping (DocumentReference?,Error?) -> Void) {
+    private func createUserDetailModelDocument(username: String,fullName: String = "", pointRef: DocumentReference,firebaseUser: User,_ closure: @escaping (DocumentReference?,Error?) -> Void) {
         
         let userDetail = UserDetailModel(
             id: firebaseUser.uid,
             email: firebaseUser.email,
             phoneNumber: firebaseUser.phoneNumber,
-            pointRef: pointRef, fullName: firebaseUser.displayName,
+            pointRef: pointRef, fullName: firebaseUser.displayName ?? fullName,
             username: username,
             profileImageUrl: firebaseUser.photoURL?.absoluteString
         )
