@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpWithEmailViewController" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
             <connections>
+                <outlet property="againPaswordTextField" destination="AYt-0G-BI3" id="IoR-BQ-qFC"/>
                 <outlet property="emailTextField" destination="XPJ-Tv-nfX" id="6tj-8C-frR"/>
                 <outlet property="fullNameTextField" destination="UIq-fO-weJ" id="lgf-Tu-sg9"/>
                 <outlet property="passwordTextField" destination="kLT-mD-Gvs" id="o65-xv-iee"/>
