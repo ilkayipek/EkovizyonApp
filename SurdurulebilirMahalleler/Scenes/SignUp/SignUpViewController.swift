@@ -36,4 +36,6 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
         self.navigationController?.pushViewController(targetVc, animated: true)
     }
     
+    @IBAction func existingAccountClicked(_ sender: Any) {
+    }
 }
