@@ -15,6 +15,7 @@
 		FA8C296D2BD7BE8C0007505C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8C296C2BD7BE8C0007505C /* SignInViewController.xib */; };
 		FA8C296E2BD7BE8C0007505C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C296B2BD7BE8C0007505C /* SignInViewController.swift */; };
 		FA8C29702BD7BEC70007505C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C296F2BD7BEC70007505C /* SignInViewModel.swift */; };
+		FA8C29722BD7C7AD0007505C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29712BD7C7AD0007505C /* UIColor+Extension.swift */; };
 		FAEDD5E92BBEC68D00E3F257 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD5E72BBEC68D00E3F257 /* FeedViewController.swift */; };
 		FAEDD5EA2BBEC68D00E3F257 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD5E82BBEC68D00E3F257 /* FeedViewController.xib */; };
 		FAEDD5EF2BC7F45900E3F257 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD5ED2BC7F45900E3F257 /* FeedTableViewCell.swift */; };
@@ -62,6 +63,7 @@
 		FA8C296B2BD7BE8C0007505C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FA8C296C2BD7BE8C0007505C /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		FA8C296F2BD7BEC70007505C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		FA8C29712BD7C7AD0007505C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FAEDD5E72BBEC68D00E3F257 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FAEDD5E82BBEC68D00E3F257 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		FAEDD5ED2BC7F45900E3F257 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				FAEDD5F92BCDB56500E3F257 /* FirebaseIdentifiable+Extension.swift */,
 				FA46D8812BD3183A00D2BE18 /* UIViewController+Extension.swift */,
 				FA46D8832BD3212600D2BE18 /* String+Extension.swift */,
+				FA8C29712BD7C7AD0007505C /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
 				FAEDD6032BCDBF3000E3F257 /* BaseViewModel.swift in Sources */,
+				FA8C29722BD7C7AD0007505C /* UIColor+Extension.swift in Sources */,
 				FAEDD6212BD1B4A600E3F257 /* UserDetailModel.swift in Sources */,
 				FAEDD60D2BCDE22B00E3F257 /* CustomGradientLoadingAnimation.swift in Sources */,
 				FAEDD5FC2BCDB5AD00E3F257 /* DocumentError.swift in Sources */,
