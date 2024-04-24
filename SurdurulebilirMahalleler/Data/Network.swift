@@ -52,7 +52,7 @@ extension Network {
         }
     }
     
-    func getMany<T: Decodable>(of type: T, with query: Query, completion: @escaping (Result<[T], Error>) -> Void) {
+    func getMany<T: Decodable>(of type: T.Type, with query: Query, completion: @escaping (Result<[T], Error>) -> Void) {
         query.getDocuments { querySnapshot, error in
             if let error = error {
                 print("Error: couldn't access snapshot, \(error)")
@@ -76,7 +76,7 @@ extension Network {
                     return
                 }
             }
-            
+            print(response)
             completion(.success(response))
         }
     }
@@ -92,9 +92,9 @@ extension Network {
             completion(.success(data))
         }
     }
-
-
-
+    
+    
+    
     
     func post<T: FirebaseIdentifiable>(_ value: T, to collection: FirebaseCollections.RawValue, completion: @escaping (Result<T, Error>) -> Void) {
         let valueToWrite: T = value
