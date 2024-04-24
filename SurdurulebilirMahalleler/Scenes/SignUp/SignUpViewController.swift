@@ -18,15 +18,15 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
         viewModel?.signUpWithGoogle(controller: self) { [weak self] result in
             guard let self else {return}
             guard result else {return}
-            self.transitionToFeedVc()
+            self.successSignUp()
         }
     }
     @IBAction func signUpWithEmailClicked(_ sender: Any) {
         transitionSignUpWithEmailVc()
     }
     
-    func transitionToFeedVc() {
-        let targetVc = FeedViewController.loadFromNib()
+    func successSignUp() {
+        let targetVc = TabBarViewController.loadFromNib()
         targetVc.modalPresentationStyle = .fullScreen
         self.present(targetVc, animated: true)
     }
