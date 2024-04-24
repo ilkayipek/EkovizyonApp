@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+            <connections>
+                <outlet property="epostaTextField" destination="gm0-be-Ig3" id="jiu-9g-wge"/>
+                <outlet property="passwordTextField" destination="1pw-ZG-AfG" id="GK1-6e-4qK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mfo-Xb-7xQ">
+                    <rect key="frame" x="10" y="272.33333333333331" width="373" height="204"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş Yap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9J-JT-LCj">
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="36"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gm0-be-Ig3" customClass="CustomUITextField" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="56" width="373" height="36"/>
+                            <color key="backgroundColor" name="LabelBackgroung"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" textContentType="email"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pw-ZG-AfG" customClass="CustomUITextField" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="112" width="373" height="36"/>
+                            <color key="backgroundColor" name="LabelBackgroung"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6N-xu-yFg" customClass="CustomUIButton" customModule="SurdurulebilirMahalleler">
+                            <rect key="frame" x="0.0" y="168" width="373" height="36"/>
+                            <color key="backgroundColor" name="ActiveButtonColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Giriş Yap" subtitle="">
+                                <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="PrimaryText"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signInButtonClicked:" destination="-1" eventType="touchUpInside" id="3dg-lT-dex"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dIh-dx-Ff0">
+                    <rect key="frame" x="10" y="676.33333333333337" width="373" height="91.666666666666629"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oro-Cs-Yrh" customClass="CustomUIButton" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="35.333333333333336"/>
+                            <color key="backgroundColor" name="ButtonBackground"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="googleIcon" title=" Google ile devam et" subtitle="">
+                                <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                <color key="baseForegroundColor" name="PrimaryText"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="PrimaryText"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signInWithGoogleButtonClicked:" destination="-1" eventType="touchUpInside" id="FXr-Sn-iAx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2n-YH-caD">
+                            <rect key="frame" x="0.0" y="55.333333333333258" width="373" height="36.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Şifremi Unuttıum">
+                                <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <color key="baseForegroundColor" name="PrimaryText"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="iForgetMyPasswordButtonClicked:" destination="-1" eventType="touchUpInside" id="eNz-AU-6QO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dIh-dx-Ff0" firstAttribute="top" secondItem="Mfo-Xb-7xQ" secondAttribute="bottom" constant="200" id="3gi-Fd-Fi6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dIh-dx-Ff0" secondAttribute="bottom" constant="50" id="EYO-Dr-nCi"/>
+                <constraint firstItem="Mfo-Xb-7xQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="F1O-Ny-RtO"/>
+                <constraint firstItem="dIh-dx-Ff0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="YIa-Pj-qvN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mfo-Xb-7xQ" secondAttribute="trailing" constant="10" id="cAZ-tl-Phm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dIh-dx-Ff0" secondAttribute="trailing" constant="10" id="xog-V1-VHT"/>
+            </constraints>
+            <point key="canvasLocation" x="44" y="-12"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="1pw-ZG-AfG">
+            <size key="intrinsicContentSize" width="68.666666666666671" height="34"/>
+        </designable>
+        <designable name="gm0-be-Ig3">
+            <size key="intrinsicContentSize" width="97.333333333333329" height="34"/>
+        </designable>
+        <designable name="oro-Cs-Yrh">
+            <size key="intrinsicContentSize" width="225.33333333333334" height="35.333333333333336"/>
+        </designable>
+        <designable name="p6N-xu-yFg">
+            <size key="intrinsicContentSize" width="101.66666666666667" height="35"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="googleIcon" width="21.333333969116211" height="21.333333969116211"/>
+        <namedColor name="ActiveButtonColor">
+            <color red="0.2669999897480011" green="0.57599997520446777" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ButtonBackground">
+            <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LabelBackgroung">
+            <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="PrimaryText">
+            <color red="0.37299999594688416" green="0.58399999141693115" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
