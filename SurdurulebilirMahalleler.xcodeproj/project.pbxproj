@@ -19,7 +19,6 @@
 		FA8C29762BD81BF30007505C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29732BD81BF30007505C /* TabBarViewController.swift */; };
 		FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29772BD839440007505C /* CustomUIImageView.swift */; };
 		FAC512112BD8510000B38B56 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512102BD8510000B38B56 /* PostModel.swift */; };
-		FAC512132BD85E0900B38B56 /* FirebaseStorageFolders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512122BD85E0900B38B56 /* FirebaseStorageFolders.swift */; };
 		FAC512162BD864A600B38B56 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512152BD864A600B38B56 /* SDWebImage */; };
 		FAC512182BD864A600B38B56 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512172BD864A600B38B56 /* SDWebImageMapKit */; };
 		FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */; };
@@ -74,7 +73,6 @@
 		FA8C29732BD81BF30007505C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FA8C29772BD839440007505C /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
 		FAC512102BD8510000B38B56 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
-		FAC512122BD85E0900B38B56 /* FirebaseStorageFolders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageFolders.swift; sourceTree = "<group>"; };
 		FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FAEDD5E72BBEC68D00E3F257 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FAEDD5E82BBEC68D00E3F257 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 				FAEDD5FB2BCDB5AD00E3F257 /* DocumentError.swift */,
 				FAEDD5FD2BCDB64900E3F257 /* FirebaseCollections.swift */,
 				FA46D87F2BD2AB0100D2BE18 /* UserInfoEnum.swift */,
-				FAC512122BD85E0900B38B56 /* FirebaseStorageFolders.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -450,7 +447,6 @@
 				FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,
 				FAF1932C2BD677870011B037 /* SignUpWithEmailViewController.swift in Sources */,
-				FAC512132BD85E0900B38B56 /* FirebaseStorageFolders.swift in Sources */,
 				FA8C29762BD81BF30007505C /* TabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
