@@ -10,7 +10,7 @@ import Foundation
 enum FirebaseCollections: String {
     case comments = "Comments"
     case products = "Products"
-    case posts = "Posts"
+    case posts = "PostModel"
     case follows = "Follows"
     case userProducts = "UserProducts"
     case users = "Users"
@@ -19,4 +19,5 @@ enum FirebaseCollections: String {
     case locations = "Locations"
     case events = "Events"
     case pointDetails = "PointDetails"
+    case postLikes = "PostLikes"
 }
