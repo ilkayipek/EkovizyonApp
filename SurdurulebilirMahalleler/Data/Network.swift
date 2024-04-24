@@ -9,7 +9,6 @@ import Firebase
 import FirebaseFirestoreSwift
 import Foundation
 
-
 class Network {
     static let shared = Network()
     let database = Firestore.firestore()
