@@ -189,7 +189,7 @@ extension AuthManager {
 
 //MARK: Document Get Functions
 extension AuthManager {
-    private func getCurrentUserDouments(userId: String, _ closure: @escaping (Bool,Error?) ->Void){
+     func getCurrentUserDouments(userId: String, _ closure: @escaping (Bool,Error?) ->Void){
         let userRef = Network.shared.refCreate(collection: .users, uid: userId)
         
         Network.shared.getDocument(reference: userRef) {[weak self] (result: Result<UserModel?, any Error>) in
