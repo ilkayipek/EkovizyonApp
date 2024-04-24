@@ -48,6 +48,8 @@ class SignInViewController: BaseViewController<SignInViewModel> {
     }
     
     func successSignIn() {
-        successAnimation(text: "Giriş Başarılı")
+        let targetVc = TabBarViewController.loadFromNib()
+        targetVc.modalPresentationStyle = .fullScreen
+        self.present(targetVc, animated: true)
     }
 }

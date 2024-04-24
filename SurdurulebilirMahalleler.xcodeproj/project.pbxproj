@@ -16,6 +16,12 @@
 		FA8C296E2BD7BE8C0007505C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C296B2BD7BE8C0007505C /* SignInViewController.swift */; };
 		FA8C29702BD7BEC70007505C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C296F2BD7BEC70007505C /* SignInViewModel.swift */; };
 		FA8C29722BD7C7AD0007505C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29712BD7C7AD0007505C /* UIColor+Extension.swift */; };
+		FA8C29762BD81BF30007505C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29732BD81BF30007505C /* TabBarViewController.swift */; };
+		FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29772BD839440007505C /* CustomUIImageView.swift */; };
+		FAC512112BD8510000B38B56 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512102BD8510000B38B56 /* PostModel.swift */; };
+		FAC512162BD864A600B38B56 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512152BD864A600B38B56 /* SDWebImage */; };
+		FAC512182BD864A600B38B56 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512172BD864A600B38B56 /* SDWebImageMapKit */; };
+		FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */; };
 		FAEDD5E92BBEC68D00E3F257 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD5E72BBEC68D00E3F257 /* FeedViewController.swift */; };
 		FAEDD5EA2BBEC68D00E3F257 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD5E82BBEC68D00E3F257 /* FeedViewController.xib */; };
 		FAEDD5EF2BC7F45900E3F257 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD5ED2BC7F45900E3F257 /* FeedTableViewCell.swift */; };
@@ -64,6 +70,10 @@
 		FA8C296C2BD7BE8C0007505C /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		FA8C296F2BD7BEC70007505C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		FA8C29712BD7C7AD0007505C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		FA8C29732BD81BF30007505C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FA8C29772BD839440007505C /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
+		FAC512102BD8510000B38B56 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FAEDD5E72BBEC68D00E3F257 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FAEDD5E82BBEC68D00E3F257 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		FAEDD5ED2BC7F45900E3F257 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,7 +113,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEDD6062BCDC19300E3F257 /* ProgressHUD in Frameworks */,
+				FAC512182BD864A600B38B56 /* SDWebImageMapKit in Frameworks */,
 				FAF5D8842BBB5BD0001759FD /* FirebaseDatabase in Frameworks */,
+				FAC512162BD864A600B38B56 /* SDWebImage in Frameworks */,
 				FAEDD61D2BCF2B9600E3F257 /* GoogleSignInSwift in Frameworks */,
 				FAF5D8882BBB5BD0001759FD /* FirebaseStorage in Frameworks */,
 				FAF5D8822BBB5BD0001759FD /* FirebaseAuth in Frameworks */,
@@ -159,6 +171,7 @@
 				FAEDD60C2BCDE22B00E3F257 /* CustomGradientLoadingAnimation.swift */,
 				FA8C29662BD6892F0007505C /* CustomUIButton.swift */,
 				FA8C29682BD68B1C0007505C /* CustomUITextField.swift */,
+				FA8C29772BD839440007505C /* CustomUIImageView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -238,6 +251,7 @@
 				FAEDD5FF2BCDBE8F00E3F257 /* Base */,
 				FAEDD5F62BCACDD900E3F257 /* Feed */,
 				FAEDD5F52BCACDCD00E3F257 /* Cells */,
+				FA8C29732BD81BF30007505C /* TabBarViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -258,6 +272,7 @@
 				FAEDD5F12BC7F61700E3F257 /* UserModel.swift */,
 				FAEDD6202BD1B4A600E3F257 /* UserDetailModel.swift */,
 				FAEDD6222BD1BC3400E3F257 /* PointDetails.swift */,
+				FAC512102BD8510000B38B56 /* PostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +284,7 @@
 				FA46D8812BD3183A00D2BE18 /* UIViewController+Extension.swift */,
 				FA46D8832BD3212600D2BE18 /* String+Extension.swift */,
 				FA8C29712BD7C7AD0007505C /* UIColor+Extension.swift */,
+				FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -329,6 +345,8 @@
 				FAEDD6052BCDC19300E3F257 /* ProgressHUD */,
 				FAEDD61A2BCF2B9600E3F257 /* GoogleSignIn */,
 				FAEDD61C2BCF2B9600E3F257 /* GoogleSignInSwift */,
+				FAC512152BD864A600B38B56 /* SDWebImage */,
+				FAC512172BD864A600B38B56 /* SDWebImageMapKit */,
 			);
 			productName = SurdurulebilirMahalleler;
 			productReference = FAF5D8602BBB0917001759FD /* SurdurulebilirMahalleler.app */;
@@ -362,6 +380,7 @@
 				FAF5D8802BBB5BD0001759FD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				FAEDD6042BCDC19200E3F257 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				FAEDD6192BCF2B9600E3F257 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				FAC512142BD864A500B38B56 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = FAF5D8612BBB0917001759FD /* Products */;
 			projectDirPath = "";
@@ -404,6 +423,8 @@
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
 				FAEDD6032BCDBF3000E3F257 /* BaseViewModel.swift in Sources */,
+				FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */,
+				FAC512112BD8510000B38B56 /* PostModel.swift in Sources */,
 				FA8C29722BD7C7AD0007505C /* UIColor+Extension.swift in Sources */,
 				FAEDD6212BD1B4A600E3F257 /* UserDetailModel.swift in Sources */,
 				FAEDD60D2BCDE22B00E3F257 /* CustomGradientLoadingAnimation.swift in Sources */,
@@ -423,8 +444,10 @@
 				FA8C29702BD7BEC70007505C /* SignInViewModel.swift in Sources */,
 				FAF5D8662BBB0917001759FD /* SceneDelegate.swift in Sources */,
 				FAEDD6082BCDC21600E3F257 /* FeedViewModel.swift in Sources */,
+				FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,
 				FAF1932C2BD677870011B037 /* SignUpWithEmailViewController.swift in Sources */,
+				FA8C29762BD81BF30007505C /* TabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +662,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FAC512142BD864A500B38B56 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.1;
+			};
+		};
 		FAEDD6042BCDC19200E3F257 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
@@ -666,6 +697,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FAC512152BD864A600B38B56 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAC512142BD864A500B38B56 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		FAC512172BD864A600B38B56 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAC512142BD864A500B38B56 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		FAEDD6052BCDC19300E3F257 /* ProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FAEDD6042BCDC19200E3F257 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
