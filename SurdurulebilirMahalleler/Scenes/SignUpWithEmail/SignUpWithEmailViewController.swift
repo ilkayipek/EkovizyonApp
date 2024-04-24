@@ -43,7 +43,7 @@ class SignUpWithEmailViewController: BaseViewController<SignUpWithEmailViewModel
     }
     
     func successCreateAccount() {
-        let targetVc = FeedViewController.loadFromNib()
+        let targetVc = TabBarViewController.loadFromNib()
         targetVc.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(targetVc, animated: true)
     }
