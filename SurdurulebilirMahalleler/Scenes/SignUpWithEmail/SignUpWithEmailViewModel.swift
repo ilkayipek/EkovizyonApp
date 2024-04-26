@@ -19,7 +19,7 @@ class SignUpWithEmailViewModel : BaseViewModel{
                         self.failAnimation?("Bir Hata Oluştu!:\(error.localizedDescription)")
                         closure(false)
                     } else if status {
-                        self.loadingAnimationStop?()
+                        self.successAnimation?("Kayıt işlemi başarılı")
                         closure(true)
                     }
                 }

@@ -43,12 +43,34 @@
                         <action selector="postShareButtonClicked:" destination="-1" eventType="touchUpInside" id="Rse-lY-sac"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFb-jM-H2P" customClass="CustomUIButton" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                    <rect key="frame" x="299.66666666666669" y="59" width="93.333333333333314" height="34.333333333333343"/>
+                    <color key="backgroundColor" name="ActiveButtonColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Çıkış Yap">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                            <real key="value" value="17"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="SignOutClicked:" destination="-1" eventType="touchUpInside" id="prd-bQ-3Kg"/>
+                        <action selector="postShareButtonClicked:" destination="-1" eventType="touchUpInside" id="5lb-P6-Eb4"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="XQt-Ue-UqG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="6C2-63-cus"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XFb-jM-H2P" secondAttribute="trailing" id="9LZ-v9-hto"/>
                 <constraint firstItem="XQt-Ue-UqG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GwK-Em-Pg9"/>
+                <constraint firstItem="XFb-jM-H2P" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HEa-1V-T2N"/>
                 <constraint firstItem="XQt-Ue-UqG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZFc-PA-mHm"/>
                 <constraint firstItem="XQt-Ue-UqG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="egd-zo-FaW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8Y3-YD-Vrp" secondAttribute="bottom" constant="30" id="kko-A2-xCA"/>
@@ -60,6 +82,9 @@
     <designables>
         <designable name="8Y3-YD-Vrp">
             <size key="intrinsicContentSize" width="47" height="34.333333333333336"/>
+        </designable>
+        <designable name="XFb-jM-H2P">
+            <size key="intrinsicContentSize" width="93.333333333333329" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>

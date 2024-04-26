@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -18,29 +18,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        /*
-         Auth.auth().addStateDidChangeListener { [weak self] auth, user in
+        if let currentUser = AuthManager.shared.auth.currentUser {
+            transitToTabBarVc()
+        }
+        
+        AuthManager.shared.auth.addStateDidChangeListener { [weak self] auth, user in
              guard let self else {return}
-             if let user  {
-                 AuthManager.shared.getCurrentUserDouments(userId: user.uid) { [weak self] status, error in
-                     guard let self else {return}
-                     if error == nil, status {
-                         self.transitToTabBarVc()
-                     } else {
-                         self.transitToSignInVc()
-                     }
-                 }
-                 
-             } else {
-                 transitToSignInVc()
+             if user == nil {
+                 self.transitToSignInVc()
              }
          }
-         */
+         
         
-         let rootVc = TabBarViewController()
+        /*
+         let rootVc = PostShareViewController()
          let navigationVc = UINavigationController(rootViewController: rootVc)
+        let currentUser = UserModel(id: UUID().uuidString, username: "ilkayipk", profileUrl: "https://lh3.googleusercontent.com/a/ACg8ocLVvL-0B96if4Iy7Ys9Vy2xLypDKwSR8nFJ7Karqsug7P7rfCw=s96-c")
+        UserInfo.shared.store(key: .user, value: currentUser)
          window?.rootViewController = navigationVc
          window?.makeKeyAndVisible()
+         */
+         
         
     }
     

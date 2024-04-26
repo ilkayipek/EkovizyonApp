@@ -11,7 +11,6 @@ class FeedViewController: BaseViewController<FeedViewModel> {
     
     @IBOutlet weak var tableView: UITableView!
     var posts = [PostModel]()
-    var users = [UserModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,20 +28,28 @@ class FeedViewController: BaseViewController<FeedViewModel> {
     }
     
     private func getPosts() {
-        viewModel?.getPosts(){ [weak self] posts, users in
+        viewModel?.getPosts(){ [weak self] posts in
             guard let self else {return}
             guard let posts else {return}
-            guard let users else {return}
             
             self.posts = posts
-            self.users = users
             self.tableView.reloadData()
         }
-    }
-    @IBAction func postShareButtonClicked(_ sender: Any) {
         
     }
+    @IBAction func postShareButtonClicked(_ sender: Any) {
+        let targetVc = PostShareViewController.loadFromNib()
+        self.navigationController?.pushViewController(targetVc, animated: true)
+    }
     
+    @IBAction func SignOutClicked(_ sender: Any) {
+        let auth = AuthManager.shared.auth
+        do {
+            try auth.signOut()
+        } catch {
+            print("çıkış başarısız")
+        }
+    }
     
 }
 
@@ -54,10 +61,9 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FeedTableViewCell.self), for: indexPath) as! FeedTableViewCell
         
-        if !posts.isEmpty, !users.isEmpty {
+        if !posts.isEmpty {
             let post = posts[indexPath.row]
-            let user = users[indexPath.row]
-            cell.loadCell(post, user)
+            cell.loadCell(post)
         }
         
         return cell

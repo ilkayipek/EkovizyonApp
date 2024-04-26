@@ -40,6 +40,8 @@ class SignUpWithEmailViewController: BaseViewController<SignUpWithEmailViewModel
     }
     
     @IBAction func existingAccountClicked(_ sender: Any) {
+        let targetVc = SignInViewController.loadFromNib()
+        self.navigationController?.pushViewController(targetVc, animated: true)
     }
     
     func successCreateAccount() {
