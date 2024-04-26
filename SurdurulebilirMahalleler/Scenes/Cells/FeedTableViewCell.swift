@@ -25,7 +25,8 @@ class FeedTableViewCell: UITableViewCell {
 
     }
     
-    func loadCell(_ postModel: PostModel,_ userModel: UserModel) {
+    func loadCell(_ postModel: PostModel) {
+        guard let userModel = postModel.userModel else {return}
         nameLabel.text = userModel.name
         userNameLabel.text = "@\(userModel.username ?? "")"
         contentLabel.text = postModel.contentText
