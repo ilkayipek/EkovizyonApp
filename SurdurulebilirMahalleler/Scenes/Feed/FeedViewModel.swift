@@ -8,54 +8,61 @@
 import Foundation
 
 class FeedViewModel: BaseViewModel {
+    let dispatchGroup = DispatchGroup()
     
-    func getPosts(_ closure: @escaping ([PostModel]?,[UserModel]?) -> Void ) {
-        
+    func getPosts(_ closure: @escaping ([PostModel]?) -> Void ) {
         let ref = Network.shared.database.collection(FirebaseCollections.posts.rawValue)
         let query = ref.order(by: "timestamp", descending: true)
-        var users = [UserModel]()
         
         gradientLoagingTabAnimation?.startAnimations()
+        dispatchGroup.enter()
         Network.shared.getMany(of: PostModel.self, with: query) { [weak self] (result: Result<[PostModel], Error>) in
             guard let self else {return}
             
             switch result {
             case .success(let posts):
-                
-                for post in posts {
-                    self.getPostUser(post.userReference?.documentID ?? " ") { user in
-                        guard let user else {return}
-                        users.append(user)
-                        closure(posts,users)
-                    }
-                }
-                
-            case .failure(let error):
-                closure(nil,nil)
-                print("Hata: \(error)")
-                self.failAnimation?("Hata: \(error.localizedDescription)")
-            }
-            self.gradientLoagingTabAnimation?.stopAnimations()
-        }
-    }
-    
-    func getPostUser(_ userId: String, _ closure: @escaping (UserModel?) ->Void) {
-        let ref = Network.shared.refCreate(collection: .users, uid: userId)
-        
-        Network.shared.getDocument(reference: ref) { (result: Result<UserModel?, any Error>) in
-            switch result {
-            case .success(let data):
-                if let data {
-                    closure(data)
-                    print(data)
-                } else {
-                    closure(nil)
+                self.getPostUser(posts) { newPosts in
+                    closure(newPosts)
                 }
                 
             case .failure(let error):
                 closure(nil)
-                print(error)
+                print("Hata: \(error)")
+                self.failAnimation?("Hata: \(error.localizedDescription)")
+
             }
+            self.dispatchGroup.leave()
+            self.gradientLoagingTabAnimation?.stopAnimations()
+        }
+    }
+    
+    func getPostUser(_ posts: [PostModel], _ closure: @escaping ([PostModel]) ->Void) {
+        
+        var updatedPosts = posts
+        
+        for i in 0..<posts.count {
+            dispatchGroup.enter()
+            var post = posts[i]
+            
+            guard let userRef = post.userReference else {
+                dispatchGroup.leave()
+                        continue
+                    }
+            
+            Network.shared.getDocument(reference: userRef) { [weak self] (result: Result<UserModel, any Error>) in
+                guard let self else {return}
+                
+                switch result {
+                case .success(let user):
+                    updatedPosts[i].userModel = user
+                case .failure(let error):
+                    print("\n HATA: \(error.localizedDescription)")
+                }
+                self.dispatchGroup.leave()
+            }
+        }
+        dispatchGroup.notify(queue: .main) {
+                closure(updatedPosts)
         }
     }
     
@@ -69,5 +76,11 @@ class FeedViewModel: BaseViewModel {
     
     func updatePost(_ postModel: PostModel) {
         
+    }
+    
+    func closeDispatchGroup(_ closure: @escaping() ->Void) -> Void {
+        dispatchGroup.notify(queue: .main) {
+            closure()
+        }
     }
 }
