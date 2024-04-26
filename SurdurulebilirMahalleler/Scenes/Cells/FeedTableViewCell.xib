@@ -70,7 +70,7 @@
                                     <constraint firstAttribute="trailing" secondItem="etY-ud-mSd" secondAttribute="trailing" constant="5" id="t1e-Q0-62H"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrimaryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-cj-OqA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-cj-OqA">
                                 <rect key="frame" x="0.0" y="35" width="332" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="dO2-6w-JlH"/>
@@ -162,7 +162,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="PrimaryIcon" width="166.66667175292969" height="166.66667175292969"/>
         <image name="bubble" catalog="system" width="128" height="110"/>
         <image name="hand.thumbsup" catalog="system" width="123" height="128"/>
         <systemColor name="systemBackgroundColor">
