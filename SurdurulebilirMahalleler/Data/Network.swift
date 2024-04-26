@@ -95,9 +95,9 @@ extension Network {
     
     
     
-    func post<T: FirebaseIdentifiable>(_ value: T, to collection: FirebaseCollections.RawValue, completion: @escaping (Result<T, Error>) -> Void) {
+    func post<T: FirebaseIdentifiable>(_ value: T, to collection: FirebaseCollections, completion: @escaping (Result<T, Error>) -> Void) {
         let valueToWrite: T = value
-        let ref = database.collection(collection).document(value.id)
+        let ref = database.collection(collection.rawValue).document(value.id)
         
         do {
             try ref.setData(from: valueToWrite) { error in
@@ -114,8 +114,8 @@ extension Network {
         }
     }
     
-    func put<T: FirebaseIdentifiable>(_ value: T, to collection: FirebaseCollections.RawValue, completion: @escaping (Result<T, Error>) -> Void) {
-        let ref = database.collection(collection).document(value.id)
+    func put<T: FirebaseIdentifiable>(_ value: T, to collection: FirebaseCollections, completion: @escaping (Result<T, Error>) -> Void) {
+        let ref = database.collection(collection.rawValue).document(value.id)
         do {
             try ref.setData(from: value) { error in
                 if let error = error {
@@ -131,8 +131,8 @@ extension Network {
         }
     }
     
-    func delete<T: FirebaseIdentifiable>(_ value: T, in collection: FirebaseCollections.RawValue, completion: @escaping (Result<Void, Error>) -> Void) {
-        let ref = database.collection(collection).document(value.id)
+    func delete<T: FirebaseIdentifiable>(_ value: T, in collection: FirebaseCollections, completion: @escaping (Result<Void, Error>) -> Void) {
+        let ref = database.collection(collection.rawValue).document(value.id)
         ref.delete { error in
             if let error = error {
                 print("Error: \(#function) in \(collection) for id: \(value.id), \(error)")
