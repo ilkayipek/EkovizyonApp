@@ -18,11 +18,16 @@
 		FA8C29722BD7C7AD0007505C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29712BD7C7AD0007505C /* UIColor+Extension.swift */; };
 		FA8C29762BD81BF30007505C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29732BD81BF30007505C /* TabBarViewController.swift */; };
 		FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29772BD839440007505C /* CustomUIImageView.swift */; };
+		FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DB0F2BDA4D2B004BCA13 /* UIImage+Extension.swift */; };
+		FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */; };
 		FAC512112BD8510000B38B56 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512102BD8510000B38B56 /* PostModel.swift */; };
 		FAC512162BD864A600B38B56 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512152BD864A600B38B56 /* SDWebImage */; };
 		FAC512182BD864A600B38B56 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512172BD864A600B38B56 /* SDWebImageMapKit */; };
 		FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */; };
 		FAC5121E2BD9A78900B38B56 /* FireBaseStorageFolders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5121D2BD9A78900B38B56 /* FireBaseStorageFolders.swift */; };
+		FAC512222BD9A9F000B38B56 /* PostShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512202BD9A9F000B38B56 /* PostShareViewController.swift */; };
+		FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC512212BD9A9F000B38B56 /* PostShareViewController.xib */; };
+		FAC512252BD9A9FF00B38B56 /* PostShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512242BD9A9FF00B38B56 /* PostShareViewModel.swift */; };
 		FAEDD5E92BBEC68D00E3F257 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD5E72BBEC68D00E3F257 /* FeedViewController.swift */; };
 		FAEDD5EA2BBEC68D00E3F257 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD5E82BBEC68D00E3F257 /* FeedViewController.xib */; };
 		FAEDD5EF2BC7F45900E3F257 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD5ED2BC7F45900E3F257 /* FeedTableViewCell.swift */; };
@@ -73,9 +78,14 @@
 		FA8C29712BD7C7AD0007505C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FA8C29732BD81BF30007505C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FA8C29772BD839440007505C /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
+		FA91DB0F2BDA4D2B004BCA13 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextView.swift; sourceTree = "<group>"; };
 		FAC512102BD8510000B38B56 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FAC5121D2BD9A78900B38B56 /* FireBaseStorageFolders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseStorageFolders.swift; sourceTree = "<group>"; };
+		FAC512202BD9A9F000B38B56 /* PostShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostShareViewController.swift; sourceTree = "<group>"; };
+		FAC512212BD9A9F000B38B56 /* PostShareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostShareViewController.xib; sourceTree = "<group>"; };
+		FAC512242BD9A9FF00B38B56 /* PostShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostShareViewModel.swift; sourceTree = "<group>"; };
 		FAEDD5E72BBEC68D00E3F257 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FAEDD5E82BBEC68D00E3F257 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		FAEDD5ED2BC7F45900E3F257 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,6 +149,16 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		FAC5121F2BD9A9D100B38B56 /* PostShare */ = {
+			isa = PBXGroup;
+			children = (
+				FAC512202BD9A9F000B38B56 /* PostShareViewController.swift */,
+				FAC512212BD9A9F000B38B56 /* PostShareViewController.xib */,
+				FAC512242BD9A9FF00B38B56 /* PostShareViewModel.swift */,
+			);
+			path = PostShare;
+			sourceTree = "<group>";
+		};
 		FAEDD5F52BCACDCD00E3F257 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +194,7 @@
 				FA8C29662BD6892F0007505C /* CustomUIButton.swift */,
 				FA8C29682BD68B1C0007505C /* CustomUITextField.swift */,
 				FA8C29772BD839440007505C /* CustomUIImageView.swift */,
+				FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -247,6 +268,7 @@
 		FAF5D8782BBB0948001759FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FAC5121F2BD9A9D100B38B56 /* PostShare */,
 				FA8C296A2BD7B8AE0007505C /* SignIn */,
 				FAF193282BD6775B0011B037 /* SignUpWithEmail */,
 				FAEDD60E2BCEB81F00E3F257 /* SignUp */,
@@ -287,6 +309,7 @@
 				FA46D8832BD3212600D2BE18 /* String+Extension.swift */,
 				FA8C29712BD7C7AD0007505C /* UIColor+Extension.swift */,
 				FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */,
+				FA91DB0F2BDA4D2B004BCA13 /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -402,6 +425,7 @@
 				FA8C296D2BD7BE8C0007505C /* SignInViewController.xib in Resources */,
 				FAEDD5F02BC7F45900E3F257 /* FeedTableViewCell.xib in Resources */,
 				FAF5D86D2BBB0919001759FD /* Assets.xcassets in Resources */,
+				FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */,
 				FAF1932B2BD677870011B037 /* SignUpWithEmailViewController.xib in Resources */,
 				FAEDD5EA2BBEC68D00E3F257 /* FeedViewController.xib in Resources */,
 				FAEDD6122BCEB83500E3F257 /* SignUpViewController.xib in Resources */,
@@ -421,8 +445,10 @@
 				FAEDD6232BD1BC3400E3F257 /* PointDetails.swift in Sources */,
 				FAEDD5FA2BCDB56500E3F257 /* FirebaseIdentifiable+Extension.swift in Sources */,
 				FAEDD5F82BCDB51B00E3F257 /* FirebaseIdentifiable.swift in Sources */,
+				FAC512222BD9A9F000B38B56 /* PostShareViewController.swift in Sources */,
 				FAEDD6162BCEB86600E3F257 /* SignUpViewModel.swift in Sources */,
 				FAEDD6012BCDBEBB00E3F257 /* BaseViewController.swift in Sources */,
+				FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */,
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
 				FAC5121E2BD9A78900B38B56 /* FireBaseStorageFolders.swift in Sources */,
@@ -439,6 +465,7 @@
 				FA46D8822BD3183B00D2BE18 /* UIViewController+Extension.swift in Sources */,
 				FAEDD5EF2BC7F45900E3F257 /* FeedTableViewCell.swift in Sources */,
 				FAEDD6252BD1C8FA00E3F257 /* UserInfo.swift in Sources */,
+				FAC512252BD9A9FF00B38B56 /* PostShareViewModel.swift in Sources */,
 				FAEDD6112BCEB83500E3F257 /* SignUpViewController.swift in Sources */,
 				FAEDD5E92BBEC68D00E3F257 /* FeedViewController.swift in Sources */,
 				FA8C29672BD6892F0007505C /* CustomUIButton.swift in Sources */,
@@ -450,6 +477,7 @@
 				FAEDD6082BCDC21600E3F257 /* FeedViewModel.swift in Sources */,
 				FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,
+				FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */,
 				FAF1932C2BD677870011B037 /* SignUpWithEmailViewController.swift in Sources */,
 				FA8C29762BD81BF30007505C /* TabBarViewController.swift in Sources */,
 			);
