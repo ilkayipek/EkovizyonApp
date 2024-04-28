@@ -20,6 +20,9 @@
 		FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29772BD839440007505C /* CustomUIImageView.swift */; };
 		FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DB0F2BDA4D2B004BCA13 /* UIImage+Extension.swift */; };
 		FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */; };
+		FAA9B4792BDE532B0027EC64 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */; };
+		FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */; };
+		FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */; };
 		FAC512112BD8510000B38B56 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512102BD8510000B38B56 /* PostModel.swift */; };
 		FAC512162BD864A600B38B56 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512152BD864A600B38B56 /* SDWebImage */; };
 		FAC512182BD864A600B38B56 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512172BD864A600B38B56 /* SDWebImageMapKit */; };
@@ -80,6 +83,9 @@
 		FA8C29772BD839440007505C /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
 		FA91DB0F2BDA4D2B004BCA13 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextView.swift; sourceTree = "<group>"; };
+		FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		FAC512102BD8510000B38B56 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FAC5121D2BD9A78900B38B56 /* FireBaseStorageFolders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseStorageFolders.swift; sourceTree = "<group>"; };
@@ -147,6 +153,16 @@
 				FA8C296F2BD7BEC70007505C /* SignInViewModel.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		FAA9B4762BDE53140027EC64 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */,
+				FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */,
+				FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		FAC5121F2BD9A9D100B38B56 /* PostShare */ = {
@@ -268,6 +284,7 @@
 		FAF5D8782BBB0948001759FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FAA9B4762BDE53140027EC64 /* Events */,
 				FAC5121F2BD9A9D100B38B56 /* PostShare */,
 				FA8C296A2BD7B8AE0007505C /* SignIn */,
 				FAF193282BD6775B0011B037 /* SignUpWithEmail */,
@@ -423,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8C296D2BD7BE8C0007505C /* SignInViewController.xib in Resources */,
+				FAA9B4792BDE532B0027EC64 /* EventsViewController.xib in Resources */,
 				FAEDD5F02BC7F45900E3F257 /* FeedTableViewCell.xib in Resources */,
 				FAF5D86D2BBB0919001759FD /* Assets.xcassets in Resources */,
 				FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */,
@@ -450,6 +468,7 @@
 				FAEDD6012BCDBEBB00E3F257 /* BaseViewController.swift in Sources */,
 				FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */,
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
+				FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
 				FAC5121E2BD9A78900B38B56 /* FireBaseStorageFolders.swift in Sources */,
 				FAEDD6032BCDBF3000E3F257 /* BaseViewModel.swift in Sources */,
@@ -476,6 +495,7 @@
 				FAF5D8662BBB0917001759FD /* SceneDelegate.swift in Sources */,
 				FAEDD6082BCDC21600E3F257 /* FeedViewModel.swift in Sources */,
 				FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */,
+				FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,
 				FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */,
 				FAF1932C2BD677870011B037 /* SignUpWithEmailViewController.swift in Sources */,
