@@ -19,22 +19,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
          
-         if let currentUser = AuthManager.shared.auth.currentUser {
-             AuthManager.shared.getCurrentUserDouments(userId: currentUser.uid) {[weak self] status, error in
-                 guard let self else {return}
-                 guard let error,!status else {self.transitToTabBarVc(); return }
-                 self.transitToSignInVc()
-             }
-         }
-         
-         AuthManager.shared.auth.addStateDidChangeListener { [weak self] auth, user in
-              guard let self else {return}
-              if user == nil {
+          if let currentUser = AuthManager.shared.auth.currentUser {
+              AuthManager.shared.getCurrentUserDouments(userId: currentUser.uid) {[weak self] status, error in
+                  guard let self else {return}
+                  guard let error,!status else {self.transitToTabBarVc(); return }
                   self.transitToSignInVc()
               }
           }
-         
-        
+          
+          AuthManager.shared.auth.addStateDidChangeListener { [weak self] auth, user in
+               guard let self else {return}
+               if user == nil {
+                   self.transitToSignInVc()
+               }
+           }
          
         /*
          let rootVc = EventsViewController()
@@ -42,6 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
          window?.rootViewController = navigationVc
          window?.makeKeyAndVisible()
          */
+         
          
          
         
