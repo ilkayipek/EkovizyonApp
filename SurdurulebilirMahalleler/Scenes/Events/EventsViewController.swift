@@ -64,6 +64,12 @@ class EventsViewController: BaseViewController<EventsViewModel> {
         present(alertController, animated: true)
     }
     
+    func transitionDetailPage(_ event: EventModel) {
+        let targetVc = EventDetailViewController.loadFromNib()
+        targetVc.eventModel = event
+        self.navigationController?.pushViewController(targetVc, animated: true)
+    }
+    
 }
 
 extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -80,5 +86,9 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = events[indexPath.row]
+        transitionDetailPage(event)
+    }
     
 }
