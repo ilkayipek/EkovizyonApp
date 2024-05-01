@@ -18,34 +18,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        if let currentUser = AuthManager.shared.auth.currentUser {
-            transitToTabBarVc()
-        }
         
-        AuthManager.shared.auth.addStateDidChangeListener { [weak self] auth, user in
-             guard let self else {return}
-             if user == nil {
+         if let currentUser = AuthManager.shared.auth.currentUser {
+             AuthManager.shared.getCurrentUserDouments(userId: currentUser.uid) {[weak self] status, error in
+                 guard let self else {return}
+                 guard let error,!status else {self.transitToTabBarVc(); return }
                  self.transitToSignInVc()
              }
          }
          
+         AuthManager.shared.auth.addStateDidChangeListener { [weak self] auth, user in
+              guard let self else {return}
+              if user == nil {
+                  self.transitToSignInVc()
+              }
+          }
+         
         
+         
         /*
-         let rootVc = PostShareViewController()
+         let rootVc = EventsViewController()
          let navigationVc = UINavigationController(rootViewController: rootVc)
-        let currentUser = UserModel(id: UUID().uuidString, username: "ilkayipk", profileUrl: "https://lh3.googleusercontent.com/a/ACg8ocLVvL-0B96if4Iy7Ys9Vy2xLypDKwSR8nFJ7Karqsug7P7rfCw=s96-c")
-        UserInfo.shared.store(key: .user, value: currentUser)
          window?.rootViewController = navigationVc
          window?.makeKeyAndVisible()
          */
+         
          
         
     }
     
     private func transitToTabBarVc() {
         let rootVc = TabBarViewController()
-        let navigationVc = UINavigationController(rootViewController: rootVc)
-        window?.rootViewController = navigationVc
+        window?.rootViewController = rootVc
         window?.makeKeyAndVisible()
     }
     
