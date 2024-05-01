@@ -7,7 +7,7 @@
 
 import UIKit
 
-class eventDetailViewController: BaseViewController<EventDetailViewModel> {
+class EventDetailViewController: BaseViewController<EventDetailViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
