@@ -10,6 +10,7 @@
 		FA46D8802BD2AB0100D2BE18 /* UserInfoEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46D87F2BD2AB0100D2BE18 /* UserInfoEnum.swift */; };
 		FA46D8822BD3183B00D2BE18 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46D8812BD3183A00D2BE18 /* UIViewController+Extension.swift */; };
 		FA46D8842BD3212600D2BE18 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46D8832BD3212600D2BE18 /* String+Extension.swift */; };
+		FA781D922BE108CC009EBF41 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D912BE108CC009EBF41 /* EventModel.swift */; };
 		FA8C29672BD6892F0007505C /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29662BD6892F0007505C /* CustomUIButton.swift */; };
 		FA8C29692BD68B1C0007505C /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29682BD68B1C0007505C /* CustomUITextField.swift */; };
 		FA8C296D2BD7BE8C0007505C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8C296C2BD7BE8C0007505C /* SignInViewController.xib */; };
@@ -20,6 +21,12 @@
 		FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29772BD839440007505C /* CustomUIImageView.swift */; };
 		FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DB0F2BDA4D2B004BCA13 /* UIImage+Extension.swift */; };
 		FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */; };
+		FAA9B4792BDE532B0027EC64 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */; };
+		FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */; };
+		FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */; };
+		FAA9B47F2BDE58780027EC64 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9B47E2BDE58780027EC64 /* EventsTableViewCell.xib */; };
+		FAA9B4802BDE58780027EC64 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B47D2BDE58780027EC64 /* EventsTableViewCell.swift */; };
+		FAA9B4822BDE59BC0027EC64 /* CustomUIViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B4812BDE59BC0027EC64 /* CustomUIViewContainer.swift */; };
 		FAC512112BD8510000B38B56 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512102BD8510000B38B56 /* PostModel.swift */; };
 		FAC512162BD864A600B38B56 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512152BD864A600B38B56 /* SDWebImage */; };
 		FAC512182BD864A600B38B56 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512172BD864A600B38B56 /* SDWebImageMapKit */; };
@@ -70,6 +77,7 @@
 		FA46D87F2BD2AB0100D2BE18 /* UserInfoEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoEnum.swift; sourceTree = "<group>"; };
 		FA46D8812BD3183A00D2BE18 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FA46D8832BD3212600D2BE18 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FA781D912BE108CC009EBF41 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		FA8C29662BD6892F0007505C /* CustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
 		FA8C29682BD68B1C0007505C /* CustomUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
 		FA8C296B2BD7BE8C0007505C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +88,12 @@
 		FA8C29772BD839440007505C /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
 		FA91DB0F2BDA4D2B004BCA13 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextView.swift; sourceTree = "<group>"; };
+		FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		FAA9B47D2BDE58780027EC64 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		FAA9B47E2BDE58780027EC64 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		FAA9B4812BDE59BC0027EC64 /* CustomUIViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewContainer.swift; sourceTree = "<group>"; };
 		FAC512102BD8510000B38B56 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FAC5121D2BD9A78900B38B56 /* FireBaseStorageFolders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseStorageFolders.swift; sourceTree = "<group>"; };
@@ -149,6 +163,16 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		FAA9B4762BDE53140027EC64 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */,
+				FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */,
+				FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		FAC5121F2BD9A9D100B38B56 /* PostShare */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +188,8 @@
 			children = (
 				FAEDD5ED2BC7F45900E3F257 /* FeedTableViewCell.swift */,
 				FAEDD5EE2BC7F45900E3F257 /* FeedTableViewCell.xib */,
+				FAA9B47D2BDE58780027EC64 /* EventsTableViewCell.swift */,
+				FAA9B47E2BDE58780027EC64 /* EventsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -195,6 +221,7 @@
 				FA8C29682BD68B1C0007505C /* CustomUITextField.swift */,
 				FA8C29772BD839440007505C /* CustomUIImageView.swift */,
 				FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */,
+				FAA9B4812BDE59BC0027EC64 /* CustomUIViewContainer.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -268,6 +295,7 @@
 		FAF5D8782BBB0948001759FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FAA9B4762BDE53140027EC64 /* Events */,
 				FAC5121F2BD9A9D100B38B56 /* PostShare */,
 				FA8C296A2BD7B8AE0007505C /* SignIn */,
 				FAF193282BD6775B0011B037 /* SignUpWithEmail */,
@@ -297,6 +325,7 @@
 				FAEDD6202BD1B4A600E3F257 /* UserDetailModel.swift */,
 				FAEDD6222BD1BC3400E3F257 /* PointDetails.swift */,
 				FAC512102BD8510000B38B56 /* PostModel.swift */,
+				FA781D912BE108CC009EBF41 /* EventModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -422,7 +451,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA9B47F2BDE58780027EC64 /* EventsTableViewCell.xib in Resources */,
 				FA8C296D2BD7BE8C0007505C /* SignInViewController.xib in Resources */,
+				FAA9B4792BDE532B0027EC64 /* EventsViewController.xib in Resources */,
 				FAEDD5F02BC7F45900E3F257 /* FeedTableViewCell.xib in Resources */,
 				FAF5D86D2BBB0919001759FD /* Assets.xcassets in Resources */,
 				FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */,
@@ -450,10 +481,12 @@
 				FAEDD6012BCDBEBB00E3F257 /* BaseViewController.swift in Sources */,
 				FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */,
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
+				FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
 				FAC5121E2BD9A78900B38B56 /* FireBaseStorageFolders.swift in Sources */,
 				FAEDD6032BCDBF3000E3F257 /* BaseViewModel.swift in Sources */,
 				FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */,
+				FA781D922BE108CC009EBF41 /* EventModel.swift in Sources */,
 				FAC512112BD8510000B38B56 /* PostModel.swift in Sources */,
 				FA8C29722BD7C7AD0007505C /* UIColor+Extension.swift in Sources */,
 				FAEDD6212BD1B4A600E3F257 /* UserDetailModel.swift in Sources */,
@@ -462,6 +495,8 @@
 				FA46D8802BD2AB0100D2BE18 /* UserInfoEnum.swift in Sources */,
 				FA46D8842BD3212600D2BE18 /* String+Extension.swift in Sources */,
 				FA8C29692BD68B1C0007505C /* CustomUITextField.swift in Sources */,
+				FAA9B4802BDE58780027EC64 /* EventsTableViewCell.swift in Sources */,
+				FAA9B4822BDE59BC0027EC64 /* CustomUIViewContainer.swift in Sources */,
 				FA46D8822BD3183B00D2BE18 /* UIViewController+Extension.swift in Sources */,
 				FAEDD5EF2BC7F45900E3F257 /* FeedTableViewCell.swift in Sources */,
 				FAEDD6252BD1C8FA00E3F257 /* UserInfo.swift in Sources */,
@@ -476,6 +511,7 @@
 				FAF5D8662BBB0917001759FD /* SceneDelegate.swift in Sources */,
 				FAEDD6082BCDC21600E3F257 /* FeedViewModel.swift in Sources */,
 				FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */,
+				FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,
 				FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */,
 				FAF1932C2BD677870011B037 /* SignUpWithEmailViewController.swift in Sources */,

@@ -239,7 +239,7 @@ extension AuthManager {
             in
             switch result {
             case .success(let data):
-                UserInfo.shared.store(key: .userDetail, value: data)
+                UserInfo.shared.store(key: .pointDetail, value: data)
                 closure(true, nil)
             case.failure(let error):
                 closure(false, error)
