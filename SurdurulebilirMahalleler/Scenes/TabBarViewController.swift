@@ -18,16 +18,16 @@ class TabBarViewController: UITabBarController {
     func addTabItems() {
         
         let homeVC = FeedViewController()
-        let vc2 = FeedViewController()
-        let vc3 = FeedViewController()
-        let vc4 = FeedViewController()
-        let vc5 = FeedViewController()
+        let mapVc = FeedViewController()
+        let pointsVc = FeedViewController()
+        let eventsVc = EventsViewController()
+        let profileVc = FeedViewController()
         
         let feed = UINavigationController(rootViewController: homeVC)
-        let map = UINavigationController(rootViewController: vc2)
-        let points = UINavigationController(rootViewController: vc3)
-        let events = UINavigationController(rootViewController: vc4)
-        let profile = UINavigationController(rootViewController: vc5)
+        let map = UINavigationController(rootViewController: mapVc)
+        let points = UINavigationController(rootViewController: pointsVc)
+        let events = UINavigationController(rootViewController: eventsVc)
+        let profile = UINavigationController(rootViewController: profileVc)
         
         
         let shadowView = UIView(frame: tabBar.bounds)
