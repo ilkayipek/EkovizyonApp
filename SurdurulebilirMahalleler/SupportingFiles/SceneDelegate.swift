@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        
+         
          if let currentUser = AuthManager.shared.auth.currentUser {
              AuthManager.shared.getCurrentUserDouments(userId: currentUser.uid) {[weak self] status, error in
                  guard let self else {return}
