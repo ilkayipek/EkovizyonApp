@@ -14,6 +14,7 @@
 		FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */; };
 		FA781D972BE2631D009EBF41 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */; };
 		FA781D992BE26333009EBF41 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D982BE26333009EBF41 /* EventDetailViewModel.swift */; };
+		FA781D9B2BE28925009EBF41 /* EventParticipantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D9A2BE28925009EBF41 /* EventParticipantModel.swift */; };
 		FA8C29672BD6892F0007505C /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29662BD6892F0007505C /* CustomUIButton.swift */; };
 		FA8C29692BD68B1C0007505C /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29682BD68B1C0007505C /* CustomUITextField.swift */; };
 		FA8C296D2BD7BE8C0007505C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8C296C2BD7BE8C0007505C /* SignInViewController.xib */; };
@@ -84,6 +85,7 @@
 		FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		FA781D982BE26333009EBF41 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		FA781D9A2BE28925009EBF41 /* EventParticipantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventParticipantModel.swift; sourceTree = "<group>"; };
 		FA8C29662BD6892F0007505C /* CustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
 		FA8C29682BD68B1C0007505C /* CustomUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
 		FA8C296B2BD7BE8C0007505C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				FAEDD6222BD1BC3400E3F257 /* PointDetails.swift */,
 				FAC512102BD8510000B38B56 /* PostModel.swift */,
 				FA781D912BE108CC009EBF41 /* EventModel.swift */,
+				FA781D9A2BE28925009EBF41 /* EventParticipantModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				FAEDD5FA2BCDB56500E3F257 /* FirebaseIdentifiable+Extension.swift in Sources */,
 				FAEDD5F82BCDB51B00E3F257 /* FirebaseIdentifiable.swift in Sources */,
 				FAC512222BD9A9F000B38B56 /* PostShareViewController.swift in Sources */,
+				FA781D9B2BE28925009EBF41 /* EventParticipantModel.swift in Sources */,
 				FAEDD6162BCEB86600E3F257 /* SignUpViewModel.swift in Sources */,
 				FAEDD6012BCDBEBB00E3F257 /* BaseViewController.swift in Sources */,
 				FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */,
