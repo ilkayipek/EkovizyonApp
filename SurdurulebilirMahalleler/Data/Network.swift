@@ -27,7 +27,7 @@ class Network {
 
 extension Network {
     
-    func getOne<T: Decodable>(of type: T, with query: Query, completion: @escaping (Result<T, Error>) -> Void) {
+    func getOne<T: Decodable>(of type: T.Type, with query: Query, completion: @escaping (Result<T, Error>) -> Void) {
         query.getDocuments { querySnapshot, error in
             if let error = error {
                 print("Error: \(#function) couldn't access snapshot, \(error)")
