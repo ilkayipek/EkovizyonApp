@@ -33,6 +33,7 @@ class EventsViewModel: BaseViewModel {
         let collection = Network.shared.database.collection(FirebaseCollections.events.rawValue)
         let query = collection.whereField("verificationCode", isEqualTo: verificationCode)
         
+        loadingAnimationStart?("Doğrulanıyor..")
         Network.shared.getOne(of: EventModel.self, with: query) { [weak self] (result: Result<EventModel, any Error>) in
             
             guard let self else {return}
@@ -49,7 +50,7 @@ class EventsViewModel: BaseViewModel {
     }
     
     private func updateUserPointDocument(_ point: Int, _ closure: @escaping(Bool) ->Void) {
-        var pointDetail: PointDetail? = UserInfo.shared.retrieve(key: .pointDetail)
+        let pointDetail: PointDetail? = UserInfo.shared.retrieve(key: .pointDetail)
         guard let pointDetail else {return}
         var newDetailpoint = pointDetail
         
@@ -61,11 +62,32 @@ class EventsViewModel: BaseViewModel {
             
             switch result {
             case .success(let data):
-                self.successAnimation?("Puan hesabınıza yüklendi\nGüncel puan: \(data.totalEventPoint).\nKullanılabilir Puan:\(data.availablePoint)")
-                UserInfo.shared.store(key: .pointDetail, value: data)
-                closure(true)
+                self.updateTotalAttendedEvents(data, closure)
             case .failure(let error):
                 self.failAnimation?("Puan Hesabınızda tanımlanırken bir hata oluştu:\(error.localizedDescription)")
+                closure(false)
+            }
+        }
+    }
+    
+    private func updateTotalAttendedEvents(_ pointDetail: PointDetail,_ closure: @escaping(Bool) -> Void) {
+        
+        guard let userId = AuthManager.shared.auth.currentUser?.uid else {closure(false); return}
+        let userDetailModel: UserDetailModel? = UserInfo.shared.retrieve(key: .userDetail)
+        guard var userDetailModel else {closure(false); return}
+        
+        userDetailModel.totalAttendedEvents += 1
+        Network.shared.put(userDetailModel, to: .userDetails) {[weak self] (result: Result<UserDetailModel, any Error>) in
+            guard let self else {return}
+            
+            switch result {
+            case .success(let userDetail):
+                UserInfo.shared.store(key: .pointDetail, value: pointDetail)
+                UserInfo.shared.store(key: .userDetail, value: userDetail)
+                self.successAnimation?("Kayıt Başarılı\nKullanılabili Puan: \(pointDetail.availablePoint)\nToplam Ziyaret:\(userDetail.totalAttendedEvents)")
+                closure(true)
+            case .failure(let error):
+                self.failAnimation?("toplam ziyaret güncellemesi sırasında bir hata oluşru: \(error.localizedDescription)")
                 closure(false)
             }
         }
