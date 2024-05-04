@@ -26,10 +26,14 @@ class PostShareViewModel: BaseViewModel {
             
             Network.shared.post(post, to: .posts) { (result: Result<PostModel, Error>) in
                 switch result {
-                case .success(let data):
-                    print("post share process success: \(data)")
-                    self.successAnimation?("Paylaşım Tamamlandı.")
-                    closure(.success(true))
+                case .success(_):
+                    
+                    self.updatePostCount { status in
+                        guard status else { self.failAnimation?("paylaşım sırasında bir hata oluştu"); return}
+                        self.successAnimation?("Paylaşım Başarılı")
+                        closure(.success(true))
+                    }
+                    
                 case .failure(let error):
                     self.loadingAnimationStop?()
                     self.failAnimation?("Hata: \(error.localizedDescription)")
@@ -53,6 +57,26 @@ class PostShareViewModel: BaseViewModel {
             case .failure(let error):
                 self.failAnimation?("Hata: \(error.localizedDescription)")
                 closure(nil, error)
+            }
+        }
+    }
+    
+    private func updatePostCount(_ closure: @escaping(Bool) -> Void) {
+        let userDetail: UserDetailModel? = UserInfo.shared.retrieve(key: .userDetail)
+        guard var userDetail else {closure(false); return}
+        
+        userDetail.totalPost += 1
+        
+        Network.shared.put(userDetail, to: .userDetails) { [weak self] (result: Result<UserDetailModel, any Error>) in
+            guard let self else {return}
+            
+            switch result {
+            case .success(_):
+                UserInfo.shared.store(key: .userDetail, value: userDetail)
+                closure(true)
+            case .failure(let error):
+                print("post sayısını güncelleme sırasında bir hata oluştu")
+                closure(false)
             }
         }
     }
