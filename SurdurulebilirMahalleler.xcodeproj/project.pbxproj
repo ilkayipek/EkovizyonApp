@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1A769A2BE2B016008C0315 /* UserProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A76982BE2B016008C0315 /* UserProfileTableViewCell.swift */; };
+		FA1A769B2BE2B016008C0315 /* UserProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1A76992BE2B016008C0315 /* UserProfileTableViewCell.xib */; };
 		FA46D8802BD2AB0100D2BE18 /* UserInfoEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46D87F2BD2AB0100D2BE18 /* UserInfoEnum.swift */; };
 		FA46D8822BD3183B00D2BE18 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46D8812BD3183A00D2BE18 /* UIViewController+Extension.swift */; };
 		FA46D8842BD3212600D2BE18 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46D8832BD3212600D2BE18 /* String+Extension.swift */; };
@@ -81,6 +83,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA1A76982BE2B016008C0315 /* UserProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewCell.swift; sourceTree = "<group>"; };
+		FA1A76992BE2B016008C0315 /* UserProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileTableViewCell.xib; sourceTree = "<group>"; };
 		FA46D87F2BD2AB0100D2BE18 /* UserInfoEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoEnum.swift; sourceTree = "<group>"; };
 		FA46D8812BD3183A00D2BE18 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FA46D8832BD3212600D2BE18 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 				FAEDD5EE2BC7F45900E3F257 /* FeedTableViewCell.xib */,
 				FAA9B47D2BDE58780027EC64 /* EventsTableViewCell.swift */,
 				FAA9B47E2BDE58780027EC64 /* EventsTableViewCell.xib */,
+				FA1A76982BE2B016008C0315 /* UserProfileTableViewCell.swift */,
+				FA1A76992BE2B016008C0315 /* UserProfileTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				FA8C296D2BD7BE8C0007505C /* SignInViewController.xib in Resources */,
 				FAA9B4792BDE532B0027EC64 /* EventsViewController.xib in Resources */,
 				FAEDD5F02BC7F45900E3F257 /* FeedTableViewCell.xib in Resources */,
+				FA1A769B2BE2B016008C0315 /* UserProfileTableViewCell.xib in Resources */,
 				FAF5D86D2BBB0919001759FD /* Assets.xcassets in Resources */,
 				FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */,
 				FA781DA12BE2A84C009EBF41 /* UserProfileViewController.xib in Resources */,
@@ -555,6 +562,7 @@
 				FAF5D8662BBB0917001759FD /* SceneDelegate.swift in Sources */,
 				FAEDD6082BCDC21600E3F257 /* FeedViewModel.swift in Sources */,
 				FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */,
+				FA1A769A2BE2B016008C0315 /* UserProfileTableViewCell.swift in Sources */,
 				FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,
 				FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */,
