@@ -17,18 +17,17 @@ class TabBarViewController: UITabBarController {
     
     func addTabItems() {
         
-        let homeVC = FeedViewController()
+        let homeVc = FeedViewController()
         let mapVc = FeedViewController()
         let pointsVc = FeedViewController()
         let eventsVc = EventsViewController()
-        let profileVc = FeedViewController()
+        let profileVc = EventsViewController()
         
-        let feed = UINavigationController(rootViewController: homeVC)
+        let feed = UINavigationController(rootViewController: homeVc)
         let map = UINavigationController(rootViewController: mapVc)
         let points = UINavigationController(rootViewController: pointsVc)
         let events = UINavigationController(rootViewController: eventsVc)
         let profile = UINavigationController(rootViewController: profileVc)
-        
         
         let shadowView = UIView(frame: tabBar.bounds)
         shadowView.backgroundColor = .white
@@ -42,7 +41,7 @@ class TabBarViewController: UITabBarController {
         
         
         
-        feed.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "house"), tag: 0)
+        feed.tabBarItem = UITabBarItem(title: "Ana sayfa", image: UIImage(systemName: "house"), tag: 0)
         feed.tabBarItem.selectedImage = UIImage(systemName: "house.fill")
         map.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "map"), tag: 1)
         map.tabBarItem.selectedImage = UIImage(systemName: "map.fill")
