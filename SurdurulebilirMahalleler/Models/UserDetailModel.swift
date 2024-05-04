@@ -15,6 +15,7 @@ struct UserDetailModel: FirebaseIdentifiable {
     let pointRef: DocumentReference?
     var totalAttendedEvents: Int
     var totalLocationsVisited: Int
+    var totalPost: Int
     var totalFollow: Int
     var totalFollower: Int
     let dateOfBirth: Date
@@ -24,23 +25,6 @@ struct UserDetailModel: FirebaseIdentifiable {
     let profileImageUrl: String?
     let pointDetail: PointDetail?
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case email
-        case phoneNumber
-        case pointRef
-        case totalAttendedEvents
-        case totalLocationsVisited
-        case totalFollow
-        case totalFollower
-        case pointDetail
-        case dateOfBirth = "dateOfBird"
-        case country
-        case fullName = "fullName"
-        case username
-        case profileImageUrl = "profileImageUrl"
-    }
-    
     init(
         id: String,
         email: String? = "",
@@ -48,6 +32,7 @@ struct UserDetailModel: FirebaseIdentifiable {
         pointRef: DocumentReference? = nil,
         totalAttendedEvents: Int = 0,
         totalLocationsVisited: Int = 0,
+        totalPost: Int = 0,
         totalFollow: Int = 0,
         totalFollower: Int = 0,
         dateOfBirth: Date = Date(),
@@ -71,5 +56,6 @@ struct UserDetailModel: FirebaseIdentifiable {
         self.username = username
         self.profileImageUrl = profileImageUrl
         self.pointDetail = pointDetail
+        self.totalPost = totalPost
     }
 }
