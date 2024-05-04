@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
           if let currentUser = AuthManager.shared.auth.currentUser {
               AuthManager.shared.getCurrentUserDouments(userId: currentUser.uid) {[weak self] status, error in
                   guard let self else {return}
-                  guard let error,!status else {self.transitToTabBarVc(); return }
+                  guard error == nil, !status else {self.transitToTabBarVc(); return }
                   self.transitToSignInVc()
               }
           }
@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                    self.transitToSignInVc()
                }
            }
-         
+          
         /*
          let rootVc = EventsViewController()
          let navigationVc = UINavigationController(rootViewController: rootVc)
@@ -41,14 +41,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
          window?.makeKeyAndVisible()
          */
          
-         
-         
+
         
     }
     
     private func transitToTabBarVc() {
-        let rootVc = TabBarViewController()
-        window?.rootViewController = rootVc
+        let tabBar = TabBarViewController()
+        window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
     }
     
