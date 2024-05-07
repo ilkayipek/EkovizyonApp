@@ -47,7 +47,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func transitToTabBarVc() {
         let tabBar = TabBarViewController()
-        window?.rootViewController = tabBar
+        let rootVc = UINavigationController(rootViewController: tabBar)
+        window?.rootViewController = rootVc
         window?.makeKeyAndVisible()
     }
     
