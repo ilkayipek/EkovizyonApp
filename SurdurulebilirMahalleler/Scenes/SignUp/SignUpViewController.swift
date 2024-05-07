@@ -27,8 +27,9 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
     
     func successSignUp() {
         let targetVc = TabBarViewController.loadFromNib()
-        targetVc.modalPresentationStyle = .fullScreen
-        self.present(targetVc, animated: true)
+        let tabBarNavigation = UINavigationController(rootViewController: targetVc)
+        tabBarNavigation.modalPresentationStyle = .fullScreen
+        self.present(tabBarNavigation, animated: true)
     }
     
     func transitionSignUpWithEmailVc() {
