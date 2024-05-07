@@ -15,6 +15,8 @@
 		FA62FEA42BE6855E00497CA3 /* CurrentUserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62FEA32BE6855E00497CA3 /* CurrentUserProfileViewController.xib */; };
 		FA62FEA52BE6855E00497CA3 /* CurrentUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA22BE6855E00497CA3 /* CurrentUserProfileViewController.swift */; };
 		FA62FEA72BE6857000497CA3 /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */; };
+		FA62FEAA2BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */; };
+		FA62FEAB2BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */; };
 		FA781D922BE108CC009EBF41 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D912BE108CC009EBF41 /* EventModel.swift */; };
 		FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */; };
 		FA781D972BE2631D009EBF41 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */; };
@@ -94,6 +96,8 @@
 		FA62FEA22BE6855E00497CA3 /* CurrentUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewController.swift; sourceTree = "<group>"; };
 		FA62FEA32BE6855E00497CA3 /* CurrentUserProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentUserProfileViewController.xib; sourceTree = "<group>"; };
 		FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
+		FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserPostTableViewCell.swift; sourceTree = "<group>"; };
+		FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentUserPostTableViewCell.xib; sourceTree = "<group>"; };
 		FA781D912BE108CC009EBF41 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				FAA9B47E2BDE58780027EC64 /* EventsTableViewCell.xib */,
 				FA1A76982BE2B016008C0315 /* UserProfileTableViewCell.swift */,
 				FA1A76992BE2B016008C0315 /* UserProfileTableViewCell.xib */,
+				FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */,
+				FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				FAF5D86D2BBB0919001759FD /* Assets.xcassets in Resources */,
 				FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */,
 				FA781DA12BE2A84C009EBF41 /* UserProfileViewController.xib in Resources */,
+				FA62FEAB2BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib in Resources */,
 				FAF1932B2BD677870011B037 /* SignUpWithEmailViewController.xib in Resources */,
 				FAEDD5EA2BBEC68D00E3F257 /* FeedViewController.xib in Resources */,
 				FA62FEA42BE6855E00497CA3 /* CurrentUserProfileViewController.xib in Resources */,
@@ -548,6 +555,7 @@
 				FA62FEA72BE6857000497CA3 /* CurrentUserProfileViewModel.swift in Sources */,
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
 				FA781DA32BE2A862009EBF41 /* UserProfileViewModel.swift in Sources */,
+				FA62FEAA2BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift in Sources */,
 				FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */,
 				FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
