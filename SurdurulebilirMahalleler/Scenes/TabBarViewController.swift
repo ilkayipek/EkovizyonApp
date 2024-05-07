@@ -21,13 +21,7 @@ class TabBarViewController: UITabBarController {
         let mapVc = FeedViewController()
         let pointsVc = FeedViewController()
         let eventsVc = EventsViewController()
-        let profileVc = EventsViewController()
-        
-        let feed = UINavigationController(rootViewController: homeVc)
-        let map = UINavigationController(rootViewController: mapVc)
-        let points = UINavigationController(rootViewController: pointsVc)
-        let events = UINavigationController(rootViewController: eventsVc)
-        let profile = UINavigationController(rootViewController: profileVc)
+        let profileVc = CurrentUserProfileViewController()
         
         let shadowView = UIView(frame: tabBar.bounds)
         shadowView.backgroundColor = .white
@@ -40,19 +34,18 @@ class TabBarViewController: UITabBarController {
         tabBar.insertSubview(shadowView, at: 0)
         
         
+        homeVc.tabBarItem = UITabBarItem(title: "Ana sayfa", image: UIImage(systemName: "house"), tag: 0)
+        homeVc.tabBarItem.selectedImage = UIImage(systemName: "house.fill")
+        mapVc.tabBarItem = UITabBarItem(title: "Harita", image: UIImage(systemName: "map"), tag: 1)
+        mapVc.tabBarItem.selectedImage = UIImage(systemName: "map.fill")
+        pointsVc.tabBarItem = UITabBarItem(title: "Skor", image: UIImage(systemName: "list.bullet.clipboard"), tag: 2)
+        pointsVc.tabBarItem.selectedImage = UIImage(systemName: "list.bullet.clipboard.fill")
+        eventsVc.tabBarItem = UITabBarItem(title: "Etkinlikler", image: UIImage(systemName: "calendar"), tag: 3)
+        eventsVc.tabBarItem.selectedImage = UIImage(systemName: "calendar")
+        profileVc.tabBarItem = UITabBarItem(title: "Profil", image: UIImage(systemName: "person"), tag: 4)
+        profileVc.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
         
-        feed.tabBarItem = UITabBarItem(title: "Ana sayfa", image: UIImage(systemName: "house"), tag: 0)
-        feed.tabBarItem.selectedImage = UIImage(systemName: "house.fill")
-        map.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "map"), tag: 1)
-        map.tabBarItem.selectedImage = UIImage(systemName: "map.fill")
-        points.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "list.bullet.clipboard"), tag: 2)
-        points.tabBarItem.selectedImage = UIImage(systemName: "list.bullet.clipboard.fill")
-        events.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "calendar"), tag: 3)
-        events.tabBarItem.selectedImage = UIImage(systemName: "calendar")
-        profile.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "person"), tag: 4)
-        profile.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
-        
-        setViewControllers([feed,map,points,events,profile], animated: true)
+        setViewControllers([homeVc,mapVc,pointsVc,eventsVc,profileVc], animated: true)
         
         
     }
