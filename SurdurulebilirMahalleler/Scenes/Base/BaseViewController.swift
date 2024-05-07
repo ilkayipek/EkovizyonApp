@@ -49,17 +49,22 @@ class BaseViewController<V: BaseViewModel>: UIViewController {
             self.failAnimation(text: text)
         }
         
-        viewModel?.alertMessage = { [weak self] (alertMessage, alertTitle, actionTitle) in
+        viewModel?.alertMessage = { [weak self] (alertMessage, alertTitle, actionTitle, actionHandler) in
             guard let self else {return}
-            self.alertMessageDefault(alertTitle: alertTitle, alertMessage: alertMessage, actionTitle: actionTitle)
+            self.alertMessageDefault(alertTitle, alertMessage, actionTitle, actionHandler)
         }
     }
     
-    func alertMessageDefault(alertTitle: String, alertMessage: String, actionTitle: String) {
+    func alertMessageDefault(_ alertTitle: String,_ alertMessage: String,_ actionTitle: String,_ handler: ((UIAlertAction) ->Void)? ) {
+        
         let alertTitle = NSLocalizedString(alertTitle, comment: "")
         let alertMessage = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
         let actionTitle = NSLocalizedString(actionTitle, comment: "")
-        let action = UIAlertAction(title: actionTitle, style:.default)
+        
+        let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
+        let action = UIAlertAction(title: actionTitle, style: .destructive, handler: handler)
+        
+        alertMessage.addAction(cancelAction)
         alertMessage.addAction(action)
         present(alertMessage, animated: true)
     }
