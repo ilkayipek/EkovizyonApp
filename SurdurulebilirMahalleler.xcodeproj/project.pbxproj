@@ -241,6 +241,13 @@
 			path = PostShare;
 			sourceTree = "<group>";
 		};
+		FADDF6C32BEA92140064773C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		FAEDD5F52BCACDCD00E3F257 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +364,7 @@
 		FAF5D8782BBB0948001759FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FADDF6C32BEA92140064773C /* Settings */,
 				FA62FEA12BE6853B00497CA3 /* CurrentUserProfile */,
 				FA781D9D2BE2A838009EBF41 /* UserProfile */,
 				FA781D932BE26302009EBF41 /* EventDetail */,
