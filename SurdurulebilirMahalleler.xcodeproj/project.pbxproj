@@ -12,6 +12,11 @@
 		FA46D8802BD2AB0100D2BE18 /* UserInfoEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46D87F2BD2AB0100D2BE18 /* UserInfoEnum.swift */; };
 		FA46D8822BD3183B00D2BE18 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46D8812BD3183A00D2BE18 /* UIViewController+Extension.swift */; };
 		FA46D8842BD3212600D2BE18 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46D8832BD3212600D2BE18 /* String+Extension.swift */; };
+		FA62FEA42BE6855E00497CA3 /* CurrentUserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62FEA32BE6855E00497CA3 /* CurrentUserProfileViewController.xib */; };
+		FA62FEA52BE6855E00497CA3 /* CurrentUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA22BE6855E00497CA3 /* CurrentUserProfileViewController.swift */; };
+		FA62FEA72BE6857000497CA3 /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */; };
+		FA62FEAA2BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */; };
+		FA62FEAB2BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */; };
 		FA781D922BE108CC009EBF41 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D912BE108CC009EBF41 /* EventModel.swift */; };
 		FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */; };
 		FA781D972BE2631D009EBF41 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */; };
@@ -88,6 +93,11 @@
 		FA46D87F2BD2AB0100D2BE18 /* UserInfoEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoEnum.swift; sourceTree = "<group>"; };
 		FA46D8812BD3183A00D2BE18 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FA46D8832BD3212600D2BE18 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FA62FEA22BE6855E00497CA3 /* CurrentUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewController.swift; sourceTree = "<group>"; };
+		FA62FEA32BE6855E00497CA3 /* CurrentUserProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentUserProfileViewController.xib; sourceTree = "<group>"; };
+		FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
+		FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserPostTableViewCell.swift; sourceTree = "<group>"; };
+		FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentUserPostTableViewCell.xib; sourceTree = "<group>"; };
 		FA781D912BE108CC009EBF41 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
@@ -171,6 +181,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA62FEA12BE6853B00497CA3 /* CurrentUserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				FA62FEA22BE6855E00497CA3 /* CurrentUserProfileViewController.swift */,
+				FA62FEA32BE6855E00497CA3 /* CurrentUserProfileViewController.xib */,
+				FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */,
+			);
+			path = CurrentUserProfile;
+			sourceTree = "<group>";
+		};
 		FA781D932BE26302009EBF41 /* EventDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +250,8 @@
 				FAA9B47E2BDE58780027EC64 /* EventsTableViewCell.xib */,
 				FA1A76982BE2B016008C0315 /* UserProfileTableViewCell.swift */,
 				FA1A76992BE2B016008C0315 /* UserProfileTableViewCell.xib */,
+				FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */,
+				FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -335,6 +357,7 @@
 		FAF5D8782BBB0948001759FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA62FEA12BE6853B00497CA3 /* CurrentUserProfile */,
 				FA781D9D2BE2A838009EBF41 /* UserProfile */,
 				FA781D932BE26302009EBF41 /* EventDetail */,
 				FAA9B4762BDE53140027EC64 /* Events */,
@@ -502,8 +525,10 @@
 				FAF5D86D2BBB0919001759FD /* Assets.xcassets in Resources */,
 				FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */,
 				FA781DA12BE2A84C009EBF41 /* UserProfileViewController.xib in Resources */,
+				FA62FEAB2BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib in Resources */,
 				FAF1932B2BD677870011B037 /* SignUpWithEmailViewController.xib in Resources */,
 				FAEDD5EA2BBEC68D00E3F257 /* FeedViewController.xib in Resources */,
+				FA62FEA42BE6855E00497CA3 /* CurrentUserProfileViewController.xib in Resources */,
 				FAEDD6122BCEB83500E3F257 /* SignUpViewController.xib in Resources */,
 				FAF5D8702BBB0919001759FD /* Base in Resources */,
 				FA781D972BE2631D009EBF41 /* EventDetailViewController.xib in Resources */,
@@ -527,8 +552,10 @@
 				FAEDD6162BCEB86600E3F257 /* SignUpViewModel.swift in Sources */,
 				FAEDD6012BCDBEBB00E3F257 /* BaseViewController.swift in Sources */,
 				FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */,
+				FA62FEA72BE6857000497CA3 /* CurrentUserProfileViewModel.swift in Sources */,
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
 				FA781DA32BE2A862009EBF41 /* UserProfileViewModel.swift in Sources */,
+				FA62FEAA2BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift in Sources */,
 				FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */,
 				FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
@@ -566,6 +593,7 @@
 				FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,
 				FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */,
+				FA62FEA52BE6855E00497CA3 /* CurrentUserProfileViewController.swift in Sources */,
 				FAF1932C2BD677870011B037 /* SignUpWithEmailViewController.swift in Sources */,
 				FA8C29762BD81BF30007505C /* TabBarViewController.swift in Sources */,
 			);
