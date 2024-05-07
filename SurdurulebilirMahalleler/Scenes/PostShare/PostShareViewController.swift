@@ -63,7 +63,7 @@ class PostShareViewController: BaseViewController<PostShareViewModel> {
     }
     
     private func transitToFeedVc() {
-        let targetVc = FeedViewController.loadFromNib()
+        let targetVc = TabBarViewController.loadFromNib()
         targetVc.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(targetVc, animated: true)
     }
