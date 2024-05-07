@@ -34,7 +34,15 @@ class UserProfileViewController: BaseViewController<UserProfileViewModel> {
         let postCellString = String(describing: FeedTableViewCell.self)
         profileTableView.register(UINib(nibName: postCellString, bundle: nil), forCellReuseIdentifier: postCellString)
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+        profileTableView.refreshControl = refreshControl
         
+    }
+    
+    //MARK: Buttons Action functions
+    @objc func refreshData(_ sender: Any) {
+        getPageData()
     }
     
     private func getPageData() {
