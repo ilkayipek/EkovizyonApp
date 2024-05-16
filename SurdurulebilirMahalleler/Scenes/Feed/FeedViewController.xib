@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="XQt-Ue-UqG" id="6Jh-di-Bhh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XQt-Ue-UqG">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Y3-YD-Vrp" customClass="CustomUIButton" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                    <rect key="frame" x="316" y="753" width="47" height="35"/>
+                    <color key="backgroundColor" name="ActiveButtonColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                            <real key="value" value="17"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="postShareButtonClicked:" destination="-1" eventType="touchUpInside" id="Rse-lY-sac"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFb-jM-H2P" customClass="CustomUIButton" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                    <rect key="frame" x="299.66666666666669" y="59" width="93.333333333333314" height="34.333333333333343"/>
+                    <color key="backgroundColor" name="ActiveButtonColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Çıkış Yap">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                            <real key="value" value="17"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="SignOutClicked:" destination="-1" eventType="touchUpInside" id="prd-bQ-3Kg"/>
+                        <action selector="postShareButtonClicked:" destination="-1" eventType="touchUpInside" id="5lb-P6-Eb4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="XQt-Ue-UqG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="6C2-63-cus"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XFb-jM-H2P" secondAttribute="trailing" id="9LZ-v9-hto"/>
+                <constraint firstItem="XQt-Ue-UqG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GwK-Em-Pg9"/>
+                <constraint firstItem="XFb-jM-H2P" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HEa-1V-T2N"/>
+                <constraint firstItem="XQt-Ue-UqG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZFc-PA-mHm"/>
+                <constraint firstItem="XQt-Ue-UqG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="egd-zo-FaW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8Y3-YD-Vrp" secondAttribute="bottom" constant="30" id="kko-A2-xCA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Y3-YD-Vrp" secondAttribute="trailing" constant="30" id="xs3-np-RPa"/>
+            </constraints>
+            <point key="canvasLocation" x="123" y="21"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="8Y3-YD-Vrp">
+            <size key="intrinsicContentSize" width="47" height="34.333333333333336"/>
+        </designable>
+        <designable name="XFb-jM-H2P">
+            <size key="intrinsicContentSize" width="93.333333333333329" height="34.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="ActiveButtonColor">
+            <color red="0.2669999897480011" green="0.57599997520446777" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
