@@ -16,30 +16,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        window = UIWindow(windowScene: windowScene)
-        
+    
+         window = UIWindow(windowScene: windowScene)
          
-          if let currentUser = AuthManager.shared.auth.currentUser {
-              AuthManager.shared.getCurrentUserDouments(userId: currentUser.uid) {[weak self] status, error in
-                  guard let self else {return}
-                  guard error == nil, !status else {self.transitToTabBarVc(); return }
-                  self.transitToSignInVc()
-              }
-          }
           
-          AuthManager.shared.auth.addStateDidChangeListener { [weak self] auth, user in
-               guard let self else {return}
-               if user == nil {
+           if let currentUser = AuthManager.shared.auth.currentUser {
+               AuthManager.shared.getCurrentUserDouments(userId: currentUser.uid) {[weak self] status, error in
+                   guard let self else {return}
+                   guard error == nil, !status else {self.transitToTabBarVc(); return }
                    self.transitToSignInVc()
                }
            }
-          
+           
+           AuthManager.shared.auth.addStateDidChangeListener { [weak self] auth, user in
+                guard let self else {return}
+                if user == nil {
+                    self.transitToSignInVc()
+                }
+            }
+        
         /*
-         let rootVc = EventsViewController()
+         let rootVc = SettingsViewController()
          let navigationVc = UINavigationController(rootViewController: rootVc)
          window?.rootViewController = navigationVc
          window?.makeKeyAndVisible()
          */
+        
          
 
         

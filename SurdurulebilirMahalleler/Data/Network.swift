@@ -142,4 +142,25 @@ extension Network {
             completion(.success(()))
         }
     }
+    
+    func deleteMany<T: FirebaseIdentifiable>(of type: T.Type,with query: Query,_ completion: @escaping(Result<Void, any Error>) -> Void) {
+        query.getDocuments { querySnapshot, error in
+            if let error {
+                print("Error:\(#function), \(error)")
+                completion(.failure(error))
+            }
+            
+            guard let documents = querySnapshot?.documents else {
+                print("Document is empty, \(#function)")
+                let error = NSError(domain: "Firestore", code: -1, userInfo: [NSLocalizedDescriptionKey: "Document is empty"])
+                completion(.failure(error)); return
+            }
+            
+            for document in documents {
+                document.reference.delete()
+            }
+            
+            completion(.success(()))
+        }
+    }
 }

@@ -74,7 +74,8 @@ class CurrentUserProfileViewController: BaseViewController<CurrentUserProfileVie
 
     
     @objc func settingsButtonClicked() {
-        
+        let targetVc = SettingsViewController.loadFromNib()
+        self.navigationController?.pushViewController(targetVc, animated: true)
     }
     
     //MARK: Get data from network

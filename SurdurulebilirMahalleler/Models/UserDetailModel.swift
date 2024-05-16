@@ -10,19 +10,20 @@ import FirebaseFirestore
 
 struct UserDetailModel: FirebaseIdentifiable {
     var id: String
-    let email: String?
-    let phoneNumber: String?
-    let pointRef: DocumentReference?
+    var email: String?
+    var phoneNumber: String?
+    var pointRef: DocumentReference?
     var totalAttendedEvents: Int
     var totalLocationsVisited: Int
     var totalPost: Int
     var totalFollow: Int
     var totalFollower: Int
-    let dateOfBirth: Date
-    let country: String
-    let fullName: String?
-    let username: String?
-    let profileImageUrl: String?
+    var dateOfBirth: Date
+    var country: String
+    var fullName: String?
+    var username: String?
+    var profileImageUrl: String?
+    var profileImageId: String
     let pointDetail: PointDetail?
     
     init(
@@ -40,6 +41,7 @@ struct UserDetailModel: FirebaseIdentifiable {
         fullName: String? = "",
         username: String,
         profileImageUrl: String? = "",
+        profileImageId: String = UUID().uuidString,
         pointDetail: PointDetail? = nil
     ) {
         self.id = id
@@ -55,6 +57,7 @@ struct UserDetailModel: FirebaseIdentifiable {
         self.fullName = fullName
         self.username = username
         self.profileImageUrl = profileImageUrl
+        self.profileImageId = profileImageId
         self.pointDetail = pointDetail
         self.totalPost = totalPost
     }

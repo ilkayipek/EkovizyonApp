@@ -49,6 +49,9 @@
 		FAC512222BD9A9F000B38B56 /* PostShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512202BD9A9F000B38B56 /* PostShareViewController.swift */; };
 		FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC512212BD9A9F000B38B56 /* PostShareViewController.xib */; };
 		FAC512252BD9A9FF00B38B56 /* PostShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512242BD9A9FF00B38B56 /* PostShareViewModel.swift */; };
+		FADDF6C92BEA92A20064773C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDF6C82BEA92A20064773C /* SettingsViewModel.swift */; };
+		FADDF6D52BEA97CB0064773C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDF6D32BEA97CB0064773C /* SettingsViewController.swift */; };
+		FADDF6D62BEA97CB0064773C /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADDF6D42BEA97CB0064773C /* SettingsViewController.xib */; };
 		FAEDD5E92BBEC68D00E3F257 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD5E72BBEC68D00E3F257 /* FeedViewController.swift */; };
 		FAEDD5EA2BBEC68D00E3F257 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD5E82BBEC68D00E3F257 /* FeedViewController.xib */; };
 		FAEDD5EF2BC7F45900E3F257 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD5ED2BC7F45900E3F257 /* FeedTableViewCell.swift */; };
@@ -128,6 +131,9 @@
 		FAC512202BD9A9F000B38B56 /* PostShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostShareViewController.swift; sourceTree = "<group>"; };
 		FAC512212BD9A9F000B38B56 /* PostShareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostShareViewController.xib; sourceTree = "<group>"; };
 		FAC512242BD9A9FF00B38B56 /* PostShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostShareViewModel.swift; sourceTree = "<group>"; };
+		FADDF6C82BEA92A20064773C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		FADDF6D32BEA97CB0064773C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FADDF6D42BEA97CB0064773C /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		FAEDD5E72BBEC68D00E3F257 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FAEDD5E82BBEC68D00E3F257 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		FAEDD5ED2BC7F45900E3F257 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -239,6 +245,16 @@
 				FAC512242BD9A9FF00B38B56 /* PostShareViewModel.swift */,
 			);
 			path = PostShare;
+			sourceTree = "<group>";
+		};
+		FADDF6C32BEA92140064773C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FADDF6C82BEA92A20064773C /* SettingsViewModel.swift */,
+				FADDF6D32BEA97CB0064773C /* SettingsViewController.swift */,
+				FADDF6D42BEA97CB0064773C /* SettingsViewController.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		FAEDD5F52BCACDCD00E3F257 /* Cells */ = {
@@ -357,6 +373,7 @@
 		FAF5D8782BBB0948001759FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FADDF6C32BEA92140064773C /* Settings */,
 				FA62FEA12BE6853B00497CA3 /* CurrentUserProfile */,
 				FA781D9D2BE2A838009EBF41 /* UserProfile */,
 				FA781D932BE26302009EBF41 /* EventDetail */,
@@ -525,6 +542,7 @@
 				FAF5D86D2BBB0919001759FD /* Assets.xcassets in Resources */,
 				FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */,
 				FA781DA12BE2A84C009EBF41 /* UserProfileViewController.xib in Resources */,
+				FADDF6D62BEA97CB0064773C /* SettingsViewController.xib in Resources */,
 				FA62FEAB2BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib in Resources */,
 				FAF1932B2BD677870011B037 /* SignUpWithEmailViewController.xib in Resources */,
 				FAEDD5EA2BBEC68D00E3F257 /* FeedViewController.xib in Resources */,
@@ -556,6 +574,7 @@
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
 				FA781DA32BE2A862009EBF41 /* UserProfileViewModel.swift in Sources */,
 				FA62FEAA2BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift in Sources */,
+				FADDF6D52BEA97CB0064773C /* SettingsViewController.swift in Sources */,
 				FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */,
 				FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
@@ -573,6 +592,7 @@
 				FA8C29692BD68B1C0007505C /* CustomUITextField.swift in Sources */,
 				FA781DA02BE2A84C009EBF41 /* UserProfileViewController.swift in Sources */,
 				FAA9B4802BDE58780027EC64 /* EventsTableViewCell.swift in Sources */,
+				FADDF6C92BEA92A20064773C /* SettingsViewModel.swift in Sources */,
 				FAA9B4822BDE59BC0027EC64 /* CustomUIViewContainer.swift in Sources */,
 				FA46D8822BD3183B00D2BE18 /* UIViewController+Extension.swift in Sources */,
 				FAEDD5EF2BC7F45900E3F257 /* FeedTableViewCell.swift in Sources */,

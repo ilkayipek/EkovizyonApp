@@ -12,9 +12,9 @@ struct UserModel: FirebaseIdentifiable {
     var id: String
     let userDetailRef: DocumentReference?
     let pointRef: DocumentReference?
-    let name: String?
-    let username: String?
-    let profileUrl: String?
+    var name: String?
+    var username: String?
+    var profileUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case id, username
