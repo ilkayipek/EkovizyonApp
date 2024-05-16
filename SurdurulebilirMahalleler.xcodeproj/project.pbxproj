@@ -35,6 +35,11 @@
 		FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C29772BD839440007505C /* CustomUIImageView.swift */; };
 		FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DB0F2BDA4D2B004BCA13 /* UIImage+Extension.swift */; };
 		FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */; };
+		FA9A32B52BF62AE2001B1E69 /* ScoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9A32B42BF62AE2001B1E69 /* ScoresViewController.xib */; };
+		FA9A32B62BF62AE2001B1E69 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A32B32BF62AE2001B1E69 /* ScoresViewController.swift */; };
+		FA9A32B82BF62AFC001B1E69 /* ScoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A32B72BF62AFC001B1E69 /* ScoresViewModel.swift */; };
+		FA9A32BD2BF62B8A001B1E69 /* ScoresTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9A32BC2BF62B8A001B1E69 /* ScoresTableViewCell.xib */; };
+		FA9A32BE2BF62B8A001B1E69 /* ScoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A32BB2BF62B8A001B1E69 /* ScoresTableViewCell.swift */; };
 		FAA9B4792BDE532B0027EC64 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */; };
 		FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */; };
 		FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */; };
@@ -119,6 +124,11 @@
 		FA8C29772BD839440007505C /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
 		FA91DB0F2BDA4D2B004BCA13 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		FA91DB112BDA735B004BCA13 /* CustomUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextView.swift; sourceTree = "<group>"; };
+		FA9A32B32BF62AE2001B1E69 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
+		FA9A32B42BF62AE2001B1E69 /* ScoresViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoresViewController.xib; sourceTree = "<group>"; };
+		FA9A32B72BF62AFC001B1E69 /* ScoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewModel.swift; sourceTree = "<group>"; };
+		FA9A32BB2BF62B8A001B1E69 /* ScoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTableViewCell.swift; sourceTree = "<group>"; };
+		FA9A32BC2BF62B8A001B1E69 /* ScoresTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoresTableViewCell.xib; sourceTree = "<group>"; };
 		FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
@@ -227,6 +237,16 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		FA9A32B22BF62ACA001B1E69 /* Scores */ = {
+			isa = PBXGroup;
+			children = (
+				FA9A32B32BF62AE2001B1E69 /* ScoresViewController.swift */,
+				FA9A32B42BF62AE2001B1E69 /* ScoresViewController.xib */,
+				FA9A32B72BF62AFC001B1E69 /* ScoresViewModel.swift */,
+			);
+			path = Scores;
+			sourceTree = "<group>";
+		};
 		FAA9B4762BDE53140027EC64 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +288,8 @@
 				FA1A76992BE2B016008C0315 /* UserProfileTableViewCell.xib */,
 				FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */,
 				FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */,
+				FA9A32BB2BF62B8A001B1E69 /* ScoresTableViewCell.swift */,
+				FA9A32BC2BF62B8A001B1E69 /* ScoresTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -373,6 +395,7 @@
 		FAF5D8782BBB0948001759FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA9A32B22BF62ACA001B1E69 /* Scores */,
 				FADDF6C32BEA92140064773C /* Settings */,
 				FA62FEA12BE6853B00497CA3 /* CurrentUserProfile */,
 				FA781D9D2BE2A838009EBF41 /* UserProfile */,
@@ -535,10 +558,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA9B47F2BDE58780027EC64 /* EventsTableViewCell.xib in Resources */,
+				FA9A32BD2BF62B8A001B1E69 /* ScoresTableViewCell.xib in Resources */,
 				FA8C296D2BD7BE8C0007505C /* SignInViewController.xib in Resources */,
 				FAA9B4792BDE532B0027EC64 /* EventsViewController.xib in Resources */,
 				FAEDD5F02BC7F45900E3F257 /* FeedTableViewCell.xib in Resources */,
 				FA1A769B2BE2B016008C0315 /* UserProfileTableViewCell.xib in Resources */,
+				FA9A32B52BF62AE2001B1E69 /* ScoresViewController.xib in Resources */,
 				FAF5D86D2BBB0919001759FD /* Assets.xcassets in Resources */,
 				FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */,
 				FA781DA12BE2A84C009EBF41 /* UserProfileViewController.xib in Resources */,
@@ -599,10 +624,12 @@
 				FAEDD6252BD1C8FA00E3F257 /* UserInfo.swift in Sources */,
 				FAC512252BD9A9FF00B38B56 /* PostShareViewModel.swift in Sources */,
 				FAEDD6112BCEB83500E3F257 /* SignUpViewController.swift in Sources */,
+				FA9A32BE2BF62B8A001B1E69 /* ScoresTableViewCell.swift in Sources */,
 				FAEDD5E92BBEC68D00E3F257 /* FeedViewController.swift in Sources */,
 				FA781D992BE26333009EBF41 /* EventDetailViewModel.swift in Sources */,
 				FA8C29672BD6892F0007505C /* CustomUIButton.swift in Sources */,
 				FAF1932E2BD677D60011B037 /* SignUpWithEmailViewModel.swift in Sources */,
+				FA9A32B82BF62AFC001B1E69 /* ScoresViewModel.swift in Sources */,
 				FAEDD5F22BC7F61700E3F257 /* UserModel.swift in Sources */,
 				FAEDD5F42BCACAA400E3F257 /* Network.swift in Sources */,
 				FA8C29702BD7BEC70007505C /* SignInViewModel.swift in Sources */,
@@ -612,6 +639,7 @@
 				FA1A769A2BE2B016008C0315 /* UserProfileTableViewCell.swift in Sources */,
 				FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,
+				FA9A32B62BF62AE2001B1E69 /* ScoresViewController.swift in Sources */,
 				FA91DB102BDA4D2B004BCA13 /* UIImage+Extension.swift in Sources */,
 				FA62FEA52BE6855E00497CA3 /* CurrentUserProfileViewController.swift in Sources */,
 				FAF1932C2BD677870011B037 /* SignUpWithEmailViewController.swift in Sources */,
