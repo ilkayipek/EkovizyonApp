@@ -40,6 +40,8 @@
 		FA9A32B82BF62AFC001B1E69 /* ScoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A32B72BF62AFC001B1E69 /* ScoresViewModel.swift */; };
 		FA9A32BD2BF62B8A001B1E69 /* ScoresTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9A32BC2BF62B8A001B1E69 /* ScoresTableViewCell.xib */; };
 		FA9A32BE2BF62B8A001B1E69 /* ScoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A32BB2BF62B8A001B1E69 /* ScoresTableViewCell.swift */; };
+		FAA0B8812BF6AD9600521027 /* LaunchCopyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA0B8802BF6AD9600521027 /* LaunchCopyViewController.xib */; };
+		FAA0B8822BF6AD9600521027 /* LaunchCopyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0B87F2BF6AD9600521027 /* LaunchCopyViewController.swift */; };
 		FAA9B4792BDE532B0027EC64 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */; };
 		FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */; };
 		FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */; };
@@ -129,6 +131,8 @@
 		FA9A32B72BF62AFC001B1E69 /* ScoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewModel.swift; sourceTree = "<group>"; };
 		FA9A32BB2BF62B8A001B1E69 /* ScoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTableViewCell.swift; sourceTree = "<group>"; };
 		FA9A32BC2BF62B8A001B1E69 /* ScoresTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoresTableViewCell.xib; sourceTree = "<group>"; };
+		FAA0B87F2BF6AD9600521027 /* LaunchCopyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCopyViewController.swift; sourceTree = "<group>"; };
+		FAA0B8802BF6AD9600521027 /* LaunchCopyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchCopyViewController.xib; sourceTree = "<group>"; };
 		FAA9B4772BDE532B0027EC64 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		FAA9B4782BDE532B0027EC64 /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		FAA9B47B2BDE53360027EC64 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
@@ -245,6 +249,15 @@
 				FA9A32B72BF62AFC001B1E69 /* ScoresViewModel.swift */,
 			);
 			path = Scores;
+			sourceTree = "<group>";
+		};
+		FAA0B87E2BF6AD4600521027 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				FAA0B87F2BF6AD9600521027 /* LaunchCopyViewController.swift */,
+				FAA0B8802BF6AD9600521027 /* LaunchCopyViewController.xib */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		FAA9B4762BDE53140027EC64 /* Events */ = {
@@ -395,6 +408,7 @@
 		FAF5D8782BBB0948001759FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FAA0B87E2BF6AD4600521027 /* Other */,
 				FA9A32B22BF62ACA001B1E69 /* Scores */,
 				FADDF6C32BEA92140064773C /* Settings */,
 				FA62FEA12BE6853B00497CA3 /* CurrentUserProfile */,
@@ -559,6 +573,7 @@
 			files = (
 				FAA9B47F2BDE58780027EC64 /* EventsTableViewCell.xib in Resources */,
 				FA9A32BD2BF62B8A001B1E69 /* ScoresTableViewCell.xib in Resources */,
+				FAA0B8812BF6AD9600521027 /* LaunchCopyViewController.xib in Resources */,
 				FA8C296D2BD7BE8C0007505C /* SignInViewController.xib in Resources */,
 				FAA9B4792BDE532B0027EC64 /* EventsViewController.xib in Resources */,
 				FAEDD5F02BC7F45900E3F257 /* FeedTableViewCell.xib in Resources */,
@@ -636,6 +651,7 @@
 				FAF5D8662BBB0917001759FD /* SceneDelegate.swift in Sources */,
 				FAEDD6082BCDC21600E3F257 /* FeedViewModel.swift in Sources */,
 				FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */,
+				FAA0B8822BF6AD9600521027 /* LaunchCopyViewController.swift in Sources */,
 				FA1A769A2BE2B016008C0315 /* UserProfileTableViewCell.swift in Sources */,
 				FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,
