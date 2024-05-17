@@ -89,11 +89,16 @@ class AuthManager {
     }
     
     func signInWithEmail(_ email: String,_ password: String,_ closure: @escaping (Bool,Error?) -> Void ) {
-        auth.signIn(withEmail: email, password: password) { authResult, error in
-            if authResult?.user != nil {
+        auth.signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let self else {return}
+            guard error == nil else {closure(false,error); return}
+            guard let user = authResult?.user else {closure(false,error); return}
+            
+            self.getCurrentUserDouments(userId: user.uid) { status, error in
+                guard error == nil else {closure(false,error); return}
+                guard status else {closure(false,nil); return}
+                
                 closure(true, nil)
-            } else {
-                closure(false, error)
             }
         }
     }
@@ -106,9 +111,10 @@ extension AuthManager {
         let url = firebaseUser.photoURL?.absoluteString ?? ""
         let fullName = firebaseUser.displayName ?? fullName
         let username = "".generateUsername(length: 15)
+        let userRef = Network.shared.refCreate(collection: .users, uid: id)
         
         
-        createPointDetailsDocument() { [weak self] (pointDetailRef, error) in
+        createPointDetailsDocument(userRef: userRef) { [weak self] (pointDetailRef, error) in
             guard let self else {return}
             
             if let error {
@@ -168,8 +174,8 @@ extension AuthManager {
         }
     }
     
-    private func createPointDetailsDocument(_ closure: @escaping (DocumentReference?,Error?) -> Void) {
-        let pointDetail = PointDetail()
+    private func createPointDetailsDocument(userRef: DocumentReference,_ closure: @escaping (DocumentReference?,Error?) -> Void) {
+        let pointDetail = PointDetail(userRef: userRef)
         
         pointDetail.post(to: .pointDetails) {(result:Result<PointDetail, any Error>) in
             switch result {
@@ -250,88 +256,62 @@ extension AuthManager {
     //MARK: Document Delete Functions
     
     func deleteAccount(_ closure: @escaping(Bool, (any Error)?) -> Void) {
-        let user: UserModel? = UserInfo.shared.retrieve(key: .user)
-        let userDetail: UserDetailModel? = UserInfo.shared.retrieve(key: .userDetail)
-        let pointDetail: PointDetail? = UserInfo.shared.retrieve(key: .pointDetail)
         
-        guard let user, let userDetail, let pointDetail else {closure(false,nil); return}
-        
-        auth.currentUser?.delete{ [weak self] error in
-            guard let self else {closure(false,nil); return}
-            guard error == nil else {closure(false,error); return}
+        //Auth Current User Delete
+        auth.currentUser?.delete { error in
+            if let error {
+                closure(false, error); return
+            }
             
-            self.deleteUserModel(user) { status, error in
-                guard status else {closure(false, error); return}
+            let network = Network.shared
+            let batch = network.database.batch()
+           
+            guard let user: UserModel = UserInfo.shared.retrieve(key: .user) else {
+                closure(false, nil); return
+            }
+            
+            let userId = user.id
+            
+            //User model delete
+            let userModelRef = network.refCreate(collection: .users, uid: userId)
+            batch.deleteDocument(userModelRef)
+            
+            //User detail model delete
+            guard let userDerailRef = user.userDetailRef else {closure(false, nil); return}
+            batch.deleteDocument(userDerailRef)
+            
+            //User's pointRef delete
+            guard let pointRef = user.pointRef else {closure(false, nil); return}
+            batch.deleteDocument(pointRef)
+            
+            //User posts delete
+            let collectionString = FirebaseCollections.posts.rawValue
+            let collection = Network.shared.database.collection(collectionString)
+            let query = collection.whereField("userReference", isEqualTo: userModelRef)
+            
+            query.getDocuments { snapshot, error in
+                if let error {
+                    closure(false, error); return
+                }
                 
-                self.deleteUserDetailModel(userDetail) { status, error in
-                    guard status else {closure(false, error); return}
-                    
-                    self.deletePointDetail(pointDetail) { status, error in
-                        guard status else {closure(false, error); return}
-                        
-                        self.deleteUserPosts(user.id) { status, error in
-                            guard status else {closure(false, error); return}
-                            
-                            closure(true,nil)
-                        }
+                guard let documents = snapshot?.documents else {
+                    return
+                }
+                
+                for document in documents {
+                    let documentRef = network.refCreate(collection: .posts, uid: document.documentID)
+                    batch.deleteDocument(documentRef)
+                }
+                
+                batch.commit { error in
+                    if let error {
+                        closure(false, error)
+                    } else {
+                        closure(true, nil)
                     }
                 }
             }
+            
         }
-    }
-    
-    private func deleteUserModel(_ userModel: UserModel,_ closure: @escaping(Bool, (any Error)?) -> Void) {
-        Network.shared.delete(userModel, in: .users) { (result: Result<Void, any Error>) in
-            switch result {
-            case .success(_):
-                UserInfo.shared.remove(key: .user)
-                closure(true,nil)
-            case .failure(let error):
-                closure(false,error)
-            }
-        }
-    }
-    
-    private func deleteUserDetailModel(_ userDetailModel: UserDetailModel,_ closure: @escaping(Bool, (any Error)?) -> Void) {
-        Network.shared.delete(userDetailModel, in: .userDetails) { (result: Result<Void, any Error>) in
-            switch result {
-            case .success(_):
-                UserInfo.shared.remove(key: .userDetail)
-                closure(true,nil)
-            case .failure(let error):
-                closure(false,error)
-            }
-        }
-    }
-    
-    private func deletePointDetail(_ pointDetail: PointDetail,_ closure: @escaping(Bool, (any Error)?) -> Void) {
-        
-        Network.shared.delete(pointDetail, in: .pointDetails) { (result: Result<Void, any Error>) in
-            switch result {
-            case .success(_):
-                UserInfo.shared.remove(key: .pointDetail)
-                closure(true,nil)
-            case .failure(let error):
-                closure(false,error)
-            }
-        }
-    }
-    
-    private func deleteUserPosts(_ userId: String,_ closure: @escaping(Bool, (any Error)?) -> Void) {
-        let collectionString = FirebaseCollections.posts.rawValue
-        let collection = Network.shared.database.collection(collectionString)
-        let userRef = Network.shared.refCreate(collection: .users, uid: userId)
-        
-        let query = collection.whereField("userReference", isEqualTo: userRef)
-        
-        Network.shared.deleteMany(of: PostModel.self, with: query) { (result: Result<Void, any Error>) in
-            switch result {
-            case .success(_):
-                closure(true, nil)
-            case .failure( let error):
-                closure(false,error)
-            }
-        }
-        
     }
 }
