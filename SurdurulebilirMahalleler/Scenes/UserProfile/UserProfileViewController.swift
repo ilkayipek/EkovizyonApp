@@ -46,26 +46,19 @@ class UserProfileViewController: BaseViewController<UserProfileViewModel> {
     }
     
     private func getPageData() {
-        gradientLoagingTabAnimation?.startAnimations()
         
         viewModel?.getUsersPost(userId: userId!) { [weak self] posts in
             guard let self else {return}
             guard let posts else {return}
             
             self.userPosts = posts
+            self.profileTableView.reloadData()
         }
         
         viewModel?.getUserDetailModel(userId: userId!) {[weak self] userDetail in
             guard let self else {return}
             self.userDetail = userDetail
             self.profileTableView.reloadData()
-        }
-        
-        viewModel?.dispatchGroupClose { [weak self] in
-            guard let self else {return}
-            
-            self.profileTableView.reloadData()
-            self.gradientLoagingTabAnimation?.stopAnimations()
         }
     }
 }
