@@ -29,6 +29,7 @@ class ScoresTableViewCell: UITableViewCell {
         self.totalScore.text = "\(model.totalScore)"
         self.username.text = "@\(model.userModel?.username ?? "")"
         
+        self.userImage.image = UIImage.image(from: .person)
         guard let url = URL(string: model.userModel?.profileUrl ?? "") else {return}
         self.userImage.loadImage(url: url, placeHolderImage: nil, nil)
     }
