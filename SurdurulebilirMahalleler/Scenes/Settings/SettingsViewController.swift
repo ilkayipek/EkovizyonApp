@@ -183,7 +183,7 @@ class SettingsViewController: BaseViewController<SettingsViewModel> {
         let auth = AuthManager.shared.auth
         do {
             try auth.signOut()
-            transitionToSignInScene()
+            transitionToSignUpScene()
         } catch {
             failAnimation(text: "Oturup Sonlandırılamadı")
         }
