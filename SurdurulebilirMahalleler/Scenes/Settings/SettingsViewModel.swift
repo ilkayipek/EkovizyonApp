@@ -129,6 +129,7 @@ class SettingsViewModel: BaseViewModel {
     
     func deleteAccount(_ closure: @escaping(Bool) -> Void) {
         
+        loadingAnimationStart?("Silme işleminiz Devam Ediyor Lütfen Bekleyiniz..")
         AuthManager.shared.deleteAccount { [weak self] status, error in
             guard let self else {return}
             

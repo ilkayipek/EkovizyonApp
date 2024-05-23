@@ -32,7 +32,7 @@
                             <rect key="frame" x="0.0" y="54" width="333" height="35.333333333333343"/>
                             <color key="backgroundColor" name="ButtonBackground"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="googleIcon" title=" Google ile devam et" subtitle="">
+                            <buttonConfiguration key="configuration" style="plain" image="google_icon" title=" Google ile devam et" subtitle="">
                                 <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
                                 <color key="baseForegroundColor" name="PrimaryText"/>
                             </buttonConfiguration>
@@ -110,7 +110,7 @@
         </designable>
     </designables>
     <resources>
-        <image name="googleIcon" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="google_icon" width="21.333333969116211" height="21.333333969116211"/>
         <namedColor name="ButtonBackground">
             <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

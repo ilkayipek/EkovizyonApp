@@ -19,7 +19,7 @@ class TabBarViewController: UITabBarController {
         
         let homeVc = FeedViewController()
         let mapVc = FeedViewController()
-        let pointsVc = FeedViewController()
+        let pointsVc = ScoresViewController()
         let eventsVc = EventsViewController()
         let profileVc = CurrentUserProfileViewController()
         

@@ -15,7 +15,7 @@ class UserProfileViewModel: BaseViewModel {
         let network = Network.shared
         let userRef = network.refCreate(collection: .users, uid: userId)
         
-        dispatchGroup.enter()
+        gradientLoagingTabAnimation?.stopAnimations()
         
         network.getDocument(reference: userRef) {[weak self] (result: Result<UserModel, any Error>) in
             guard let self else {return}
@@ -32,7 +32,7 @@ class UserProfileViewModel: BaseViewModel {
                 closure(nil)
             }
             
-            self.dispatchGroup.leave()
+            self.gradientLoagingTabAnimation?.stopAnimations()
         }
     }
     
@@ -43,8 +43,6 @@ class UserProfileViewModel: BaseViewModel {
         let collection = network.database.collection(collectionString)
         let userRef = network.refCreate(collection: .users, uid: userModel.id)
         let query = collection.whereField("userReference", isEqualTo: userRef)
-        
-        dispatchGroup.enter()
         
         network.getMany(of: PostModel.self, with: query) {[weak self] (result: Result<[PostModel], any Error>) in
             guard let self else {return}
@@ -64,15 +62,12 @@ class UserProfileViewModel: BaseViewModel {
                 closure(nil)
             }
             
-            self.dispatchGroup.leave()
         }
     }
     
     func getUserDetailModel(userId: String, _ closure: @escaping(UserDetailModel?) -> Void) {
         let network = Network.shared
         let userRef = network.refCreate(collection: .userDetails, uid: userId)
-        
-        dispatchGroup.enter()
         
         network.getDocument(reference: userRef) {[weak self] (result: Result<UserDetailModel, any Error>) in
             guard let self else {return}
@@ -84,8 +79,6 @@ class UserProfileViewModel: BaseViewModel {
                 print("Kullanıcı bilgilerini getirme sırasında bir hata oluşru: \(error.localizedDescription)")
                 closure(nil)
             }
-            
-            self.dispatchGroup.leave()
         }
     }
     

@@ -104,6 +104,20 @@ class SettingsViewController: BaseViewController<SettingsViewModel> {
         return true
     }
     
+    private func transitionToSignUpScene() {
+        let targetVc = SignUpViewController()
+        let navigationVc = UINavigationController(rootViewController: targetVc)
+        navigationVc.modalPresentationStyle = .fullScreen
+        present(navigationVc, animated: true)
+    }
+    
+    private func transitionToSignInScene() {
+        let targetVc = SignInViewController()
+        let navigationVc = UINavigationController(rootViewController: targetVc)
+        navigationVc.modalPresentationStyle = .fullScreen
+        present(navigationVc, animated: true)
+    }
+    
     //MARK: OBJC FUNCTIONS
     
     @objc func saveUserDetail() {
@@ -159,7 +173,8 @@ class SettingsViewController: BaseViewController<SettingsViewModel> {
             guard let self else {return}
             
             viewModel?.deleteAccount { status in
-                print("ViewController: Silme işlemi Başarılı")
+                guard status else {return}
+                self.transitionToSignUpScene()
             }
         }
     }
@@ -168,6 +183,7 @@ class SettingsViewController: BaseViewController<SettingsViewModel> {
         let auth = AuthManager.shared.auth
         do {
             try auth.signOut()
+            transitionToSignUpScene()
         } catch {
             failAnimation(text: "Oturup Sonlandırılamadı")
         }
