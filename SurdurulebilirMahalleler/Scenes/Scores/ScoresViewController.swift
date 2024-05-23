@@ -10,7 +10,8 @@ import UIKit
 class ScoresViewController: BaseViewController<ScoresViewModel> {
     @IBOutlet weak var scoreListTableView: UITableView!
     
-    var scoreList = [PointDetail]()
+    var firstThreeScoreList = [PointDetail?]()
+    var otherScoreList = [PointDetail]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,10 @@ class ScoresViewController: BaseViewController<ScoresViewModel> {
         scoreListTableView.dataSource = self
         scoreListTableView.delegate = self
         
-        let cellString = String(describing: ScoresTableViewCell.self)
+        var cellString = String(describing: ScoresTableViewCell.self)
+        scoreListTableView.register(UINib(nibName: cellString, bundle: nil), forCellReuseIdentifier: cellString)
+        
+        cellString = String(describing: FirstThreeScoreTableViewCell.self)
         scoreListTableView.register(UINib(nibName: cellString, bundle: nil), forCellReuseIdentifier: cellString)
         
         let refreshControl = UIRefreshControl()
@@ -43,7 +47,8 @@ class ScoresViewController: BaseViewController<ScoresViewModel> {
             guard let scores else {return}
             
             self.scoreListTableView.refreshControl?.endRefreshing()
-            self.scoreList = scores
+            self.firstThreeScoreList = Array(scores.prefix(3))
+            self.otherScoreList = Array(scores.dropFirst(3))
             self.scoreListTableView.reloadData()
         }
     }
@@ -68,21 +73,41 @@ class ScoresViewController: BaseViewController<ScoresViewModel> {
 
 extension ScoresViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scoreList.count
+        return otherScoreList.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = scoreListTableView.dequeueReusableCell(withIdentifier: String(describing: ScoresTableViewCell.self), for: indexPath) as! ScoresTableViewCell
+        let index = indexPath.row
         
-        let score = scoreList[indexPath.row]
-        cell.loadCell(score, scoreNumber: indexPath.row + 1)
-        return cell
+        switch index {
+        case 0:
+            let cell = scoreListTableView.dequeueReusableCell(withIdentifier: String(describing: FirstThreeScoreTableViewCell.self), for: indexPath) as! FirstThreeScoreTableViewCell
+            
+            cell.personSelectedDelegate = self
+            cell.loadCell(firstThreeScoreList)
+            return cell
+            
+        default:
+            let cell = scoreListTableView.dequeueReusableCell(withIdentifier: String(describing: ScoresTableViewCell.self), for: indexPath) as! ScoresTableViewCell
+            
+            let score = otherScoreList[index - 1]
+            cell.loadCell(score, scoreNumber: index + 3)
+            return cell
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        guard let selectedUserId = scoreList[indexPath.row].userModel?.id else {return}
+        guard indexPath.row != 0 else {return}
+        guard let selectedUserId = otherScoreList[indexPath.row - 1].userModel?.id else {return}
         transitToUserDetail(selectedUserId)
     }
     
+}
+
+extension ScoresViewController: FirstThreeScoreDelegate {
+    
+    func personSelected(_ userId: String) {
+        transitToUserDetail(userId)
+    }
 }
