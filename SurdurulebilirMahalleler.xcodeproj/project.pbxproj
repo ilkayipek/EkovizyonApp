@@ -17,6 +17,8 @@
 		FA62FEA72BE6857000497CA3 /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */; };
 		FA62FEAA2BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */; };
 		FA62FEAB2BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */; };
+		FA70DDAC2C038C9E00A5ECFF /* HomeFeedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70DDAB2C038C9E00A5ECFF /* HomeFeedDelegate.swift */; };
+		FA70DDAE2C03963000A5ECFF /* SystemImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70DDAD2C03963000A5ECFF /* SystemImageName.swift */; };
 		FA781D922BE108CC009EBF41 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D912BE108CC009EBF41 /* EventModel.swift */; };
 		FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */; };
 		FA781D972BE2631D009EBF41 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */; };
@@ -113,6 +115,8 @@
 		FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
 		FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserPostTableViewCell.swift; sourceTree = "<group>"; };
 		FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentUserPostTableViewCell.xib; sourceTree = "<group>"; };
+		FA70DDAB2C038C9E00A5ECFF /* HomeFeedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedDelegate.swift; sourceTree = "<group>"; };
+		FA70DDAD2C03963000A5ECFF /* SystemImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImageName.swift; sourceTree = "<group>"; };
 		FA781D912BE108CC009EBF41 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
@@ -484,6 +488,7 @@
 				FA46D87F2BD2AB0100D2BE18 /* UserInfoEnum.swift */,
 				FAC5121D2BD9A78900B38B56 /* FireBaseStorageFolders.swift */,
 				FABDF4BE2BFE006100CFE9EF /* NamedImageAssets.swift */,
+				FA70DDAD2C03963000A5ECFF /* SystemImageName.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -500,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				FADFA9CE2BFE458A00D56E0C /* FirstThreeScoreDelegate.swift */,
+				FA70DDAB2C038C9E00A5ECFF /* HomeFeedDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -628,6 +634,7 @@
 				FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */,
 				FA62FEA72BE6857000497CA3 /* CurrentUserProfileViewModel.swift in Sources */,
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
+				FA70DDAC2C038C9E00A5ECFF /* HomeFeedDelegate.swift in Sources */,
 				FA781DA32BE2A862009EBF41 /* UserProfileViewModel.swift in Sources */,
 				FADFA9CF2BFE458A00D56E0C /* FirstThreeScoreDelegate.swift in Sources */,
 				FA62FEAA2BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift in Sources */,
@@ -635,6 +642,7 @@
 				FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */,
 				FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
+				FA70DDAE2C03963000A5ECFF /* SystemImageName.swift in Sources */,
 				FAC5121E2BD9A78900B38B56 /* FireBaseStorageFolders.swift in Sources */,
 				FAEDD6032BCDBF3000E3F257 /* BaseViewModel.swift in Sources */,
 				FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */,
