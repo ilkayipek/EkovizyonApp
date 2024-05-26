@@ -98,10 +98,10 @@
                                 <rect key="frame" x="0.0" y="298" width="332" height="20"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ne4-6s-1Yo">
-                                        <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130.33333333333334" height="20"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="hand.thumbsup" catalog="system" symbolScale="small"/>
+                                            <imageReference key="image" image="hand.thumbsup" catalog="system" symbolScale="medium"/>
                                             <attributedString key="attributedTitle">
                                                 <fragment content=" 123 ">
                                                     <attributes>
@@ -115,10 +115,10 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtZ-8N-JOf">
-                                        <rect key="frame" x="135.33333333333337" y="0.0" width="196.66666666666663" height="20"/>
+                                        <rect key="frame" x="136.33333333333337" y="0.0" width="195.66666666666663" height="20"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="bubble" catalog="system" symbolScale="small"/>
+                                            <imageReference key="image" image="bubble" catalog="system" symbolScale="medium"/>
                                             <attributedString key="attributedTitle">
                                                 <fragment content="123 yorum">
                                                     <attributes>
