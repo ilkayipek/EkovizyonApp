@@ -16,6 +16,7 @@ struct PostModel: FirebaseIdentifiable {
     var totalLike: Int
     var totalComment: Int
     var userModel: UserModel?
+    var postLikeId: String?
     
     init(id: String = UUID().uuidString,
          userReference: DocumentReference,
@@ -24,7 +25,8 @@ struct PostModel: FirebaseIdentifiable {
          timestamp: Date = Date(),
          totalLike: Int = 0,
          totalComment: Int = 0,
-         userModel: UserModel? = nil) {
+         userModel: UserModel? = nil,
+         postLikeId: String? = nil) {
         self.id = id
         self.userReference = userReference
         self.contentText = contentText
@@ -33,5 +35,6 @@ struct PostModel: FirebaseIdentifiable {
         self.totalLike = totalLike
         self.totalComment = totalComment
         self.userModel = userModel
+        self.postLikeId = postLikeId
     }
 }
