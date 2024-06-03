@@ -14,9 +14,15 @@ class FeedViewController: BaseViewController<FeedViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.title = "Ana Sayfa"
+        
         viewModel = FeedViewModel()
         configureTableView()
-        getPosts()
+        getInitPosts()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.title = ""
     }
     
     private func configureTableView() {
@@ -25,30 +31,49 @@ class FeedViewController: BaseViewController<FeedViewModel> {
         
         let stringCell = String(describing: FeedTableViewCell.self)
         tableView.register(UINib(nibName: stringCell, bundle: nil), forCellReuseIdentifier: stringCell)
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
     }
     
-    private func getPosts() {
-        viewModel?.getPosts(){ [weak self] posts in
+    private func getInitPosts() {
+        viewModel?.getInitPosts(){ [weak self] posts in
             guard let self else {return}
-            guard let posts else {return}
+            self.tableView.refreshControl?.endRefreshing()
+            
+            guard let posts else {
+                self.tableView.reloadData()
+                return
+            }
             
             self.posts = posts
             self.tableView.reloadData()
         }
-        
     }
+    
+    private func getAfterPosts() {
+        gradientLoagingTabAnimation?.startAnimations()
+        viewModel?.getAfterPosts(){ [weak self] posts in
+            guard let self else {return}
+            self.gradientLoagingTabAnimation?.stopAnimations()
+            guard let posts else {
+                self.tableView.reloadData()
+                return
+            }
+            
+            self.posts += posts
+            self.tableView.reloadData()
+        }
+    }
+    
+    @objc func reloadData() {
+        getInitPosts()
+    }
+    
     @IBAction func postShareButtonClicked(_ sender: Any) {
         let targetVc = PostShareViewController.loadFromNib()
         self.navigationController?.pushViewController(targetVc, animated: true)
-    }
-    
-    @IBAction func SignOutClicked(_ sender: Any) {
-        let auth = AuthManager.shared.auth
-        do {
-            try auth.signOut()
-        } catch {
-            print("çıkış başarısız")
-        }
     }
     
 }
@@ -64,11 +89,54 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         if !posts.isEmpty {
             let post = posts[indexPath.row]
             cell.loadCell(post)
+            cell.feedDelegate = self
         }
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (posts.count - 1) {
+            getAfterPosts()
+        }
+    }
+    
+}
+
+extension FeedViewController: HomeFeedDelegate {
+    func likePost(post: PostModel, _ closure: @escaping (String?) -> Void) {
+        viewModel?.sendLike(post: post, closure)
+    }
+    
+    func unlikePost(post: PostModel, _ closure: @escaping (Bool) -> Void) {
+        guard let likeId = post.postLikeId else {return}
+        viewModel?.sendUnikePost(post: post, likeId: likeId, closure)
+    }
+    
+    func userSelected(_ userId: String) {
+        let targetVc = UserProfileViewController.loadFromNib()
+        targetVc.userId = userId
+        self.navigationController?.pushViewController(targetVc, animated: true)
+    }
+    
+    func commentsSelected(_ postId: String) {
+         
+    }
+    
+    func updateCell(_ cell: FeedTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        guard let postModel = cell.postModel else {return}
+        
+        posts[indexPath.row] = postModel
+        tableView.reloadRows(at: [indexPath], with: .none)
+    }
+    
+    func imageSelected(_ image: UIImage?) {
+        let targetVc = FullScreenImageViewController.loadFromNib()
+        targetVc.image = image
+        targetVc.modalPresentationStyle = .fullScreen
+        present(targetVc, animated: true)
+    }
     
     
 }
