@@ -15,6 +15,5 @@ protocol HomeFeedDelegate {
     func userSelected(_ userId: String)
     func commentsSelected(_ postId: String)
     func updateCell(_ cell: FeedTableViewCell)
-    func cellReloadSize(_ cell: FeedTableViewCell)
     func imageSelected(_ image: UIImage?)
 }
