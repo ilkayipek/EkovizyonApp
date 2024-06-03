@@ -17,6 +17,12 @@
 		FA62FEA72BE6857000497CA3 /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */; };
 		FA62FEAA2BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */; };
 		FA62FEAB2BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */; };
+		FA70DDAC2C038C9E00A5ECFF /* HomeFeedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70DDAB2C038C9E00A5ECFF /* HomeFeedDelegate.swift */; };
+		FA70DDAE2C03963000A5ECFF /* SystemImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70DDAD2C03963000A5ECFF /* SystemImageName.swift */; };
+		FA70DDB02C03AAB800A5ECFF /* PostLikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70DDAF2C03AAB800A5ECFF /* PostLikeModel.swift */; };
+		FA70DDB42C04A8F100A5ECFF /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70DDB22C04A8F100A5ECFF /* FullScreenImageViewController.swift */; };
+		FA70DDB52C04A8F100A5ECFF /* FullScreenImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA70DDB32C04A8F100A5ECFF /* FullScreenImageViewController.xib */; };
+		FA70DDB72C04B53E00A5ECFF /* Date+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70DDB62C04B53E00A5ECFF /* Date+Localize.swift */; };
 		FA781D922BE108CC009EBF41 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D912BE108CC009EBF41 /* EventModel.swift */; };
 		FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */; };
 		FA781D972BE2631D009EBF41 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */; };
@@ -52,6 +58,7 @@
 		FABDF4BF2BFE006100CFE9EF /* NamedImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDF4BE2BFE006100CFE9EF /* NamedImageAssets.swift */; };
 		FABDF4C22BFE02BF00CFE9EF /* FirstThreeScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDF4C02BFE02BF00CFE9EF /* FirstThreeScoreTableViewCell.swift */; };
 		FABDF4C32BFE02BF00CFE9EF /* FirstThreeScoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABDF4C12BFE02BF00CFE9EF /* FirstThreeScoreTableViewCell.xib */; };
+		FABEDC812C04BA5B00DB5C56 /* LocaleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEDC802C04BA5B00DB5C56 /* LocaleId.swift */; };
 		FAC512112BD8510000B38B56 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC512102BD8510000B38B56 /* PostModel.swift */; };
 		FAC512162BD864A600B38B56 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512152BD864A600B38B56 /* SDWebImage */; };
 		FAC512182BD864A600B38B56 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAC512172BD864A600B38B56 /* SDWebImageMapKit */; };
@@ -113,6 +120,12 @@
 		FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
 		FA62FEA82BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserPostTableViewCell.swift; sourceTree = "<group>"; };
 		FA62FEA92BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentUserPostTableViewCell.xib; sourceTree = "<group>"; };
+		FA70DDAB2C038C9E00A5ECFF /* HomeFeedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedDelegate.swift; sourceTree = "<group>"; };
+		FA70DDAD2C03963000A5ECFF /* SystemImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImageName.swift; sourceTree = "<group>"; };
+		FA70DDAF2C03AAB800A5ECFF /* PostLikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLikeModel.swift; sourceTree = "<group>"; };
+		FA70DDB22C04A8F100A5ECFF /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
+		FA70DDB32C04A8F100A5ECFF /* FullScreenImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreenImageViewController.xib; sourceTree = "<group>"; };
+		FA70DDB62C04B53E00A5ECFF /* Date+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Localize.swift"; sourceTree = "<group>"; };
 		FA781D912BE108CC009EBF41 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		FA781D942BE2631D009EBF41 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		FA781D952BE2631D009EBF41 /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
@@ -148,6 +161,7 @@
 		FABDF4BE2BFE006100CFE9EF /* NamedImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedImageAssets.swift; sourceTree = "<group>"; };
 		FABDF4C02BFE02BF00CFE9EF /* FirstThreeScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstThreeScoreTableViewCell.swift; sourceTree = "<group>"; };
 		FABDF4C12BFE02BF00CFE9EF /* FirstThreeScoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstThreeScoreTableViewCell.xib; sourceTree = "<group>"; };
+		FABEDC802C04BA5B00DB5C56 /* LocaleId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleId.swift; sourceTree = "<group>"; };
 		FAC512102BD8510000B38B56 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FAC5121D2BD9A78900B38B56 /* FireBaseStorageFolders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseStorageFolders.swift; sourceTree = "<group>"; };
@@ -219,6 +233,15 @@
 				FA62FEA62BE6857000497CA3 /* CurrentUserProfileViewModel.swift */,
 			);
 			path = CurrentUserProfile;
+			sourceTree = "<group>";
+		};
+		FA70DDB12C04A8CA00A5ECFF /* FullScreenImage */ = {
+			isa = PBXGroup;
+			children = (
+				FA70DDB22C04A8F100A5ECFF /* FullScreenImageViewController.swift */,
+				FA70DDB32C04A8F100A5ECFF /* FullScreenImageViewController.xib */,
+			);
+			path = FullScreenImage;
 			sourceTree = "<group>";
 		};
 		FA781D932BE26302009EBF41 /* EventDetail */ = {
@@ -420,6 +443,7 @@
 		FAF5D8782BBB0948001759FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA70DDB12C04A8CA00A5ECFF /* FullScreenImage */,
 				FAA0B87E2BF6AD4600521027 /* Other */,
 				FA9A32B22BF62ACA001B1E69 /* Scores */,
 				FADDF6C32BEA92140064773C /* Settings */,
@@ -458,6 +482,7 @@
 				FAC512102BD8510000B38B56 /* PostModel.swift */,
 				FA781D912BE108CC009EBF41 /* EventModel.swift */,
 				FA781D9A2BE28925009EBF41 /* EventParticipantModel.swift */,
+				FA70DDAF2C03AAB800A5ECFF /* PostLikeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -472,6 +497,7 @@
 				FAC512192BD864F000B38B56 /* UIImageView+Extension.swift */,
 				FA91DB0F2BDA4D2B004BCA13 /* UIImage+Firebase.swift */,
 				FABDF4BC2BFDFCDD00CFE9EF /* UIImage+Assets.swift */,
+				FA70DDB62C04B53E00A5ECFF /* Date+Localize.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -484,6 +510,8 @@
 				FA46D87F2BD2AB0100D2BE18 /* UserInfoEnum.swift */,
 				FAC5121D2BD9A78900B38B56 /* FireBaseStorageFolders.swift */,
 				FABDF4BE2BFE006100CFE9EF /* NamedImageAssets.swift */,
+				FA70DDAD2C03963000A5ECFF /* SystemImageName.swift */,
+				FABEDC802C04BA5B00DB5C56 /* LocaleId.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -500,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				FADFA9CE2BFE458A00D56E0C /* FirstThreeScoreDelegate.swift */,
+				FA70DDAB2C038C9E00A5ECFF /* HomeFeedDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -599,6 +628,7 @@
 				FAC512232BD9A9F000B38B56 /* PostShareViewController.xib in Resources */,
 				FA781DA12BE2A84C009EBF41 /* UserProfileViewController.xib in Resources */,
 				FADDF6D62BEA97CB0064773C /* SettingsViewController.xib in Resources */,
+				FA70DDB52C04A8F100A5ECFF /* FullScreenImageViewController.xib in Resources */,
 				FA62FEAB2BE7605A00497CA3 /* CurrentUserPostTableViewCell.xib in Resources */,
 				FAF1932B2BD677870011B037 /* SignUpWithEmailViewController.xib in Resources */,
 				FAEDD5EA2BBEC68D00E3F257 /* FeedViewController.xib in Resources */,
@@ -618,6 +648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8C296E2BD7BE8C0007505C /* SignInViewController.swift in Sources */,
+				FABEDC812C04BA5B00DB5C56 /* LocaleId.swift in Sources */,
 				FAEDD6232BD1BC3400E3F257 /* PointDetails.swift in Sources */,
 				FAEDD5FA2BCDB56500E3F257 /* FirebaseIdentifiable+Extension.swift in Sources */,
 				FAEDD5F82BCDB51B00E3F257 /* FirebaseIdentifiable.swift in Sources */,
@@ -628,6 +659,8 @@
 				FA91DB122BDA735B004BCA13 /* CustomUITextView.swift in Sources */,
 				FA62FEA72BE6857000497CA3 /* CurrentUserProfileViewModel.swift in Sources */,
 				FAEDD5FE2BCDB64900E3F257 /* FirebaseCollections.swift in Sources */,
+				FA70DDAC2C038C9E00A5ECFF /* HomeFeedDelegate.swift in Sources */,
+				FA70DDB02C03AAB800A5ECFF /* PostLikeModel.swift in Sources */,
 				FA781DA32BE2A862009EBF41 /* UserProfileViewModel.swift in Sources */,
 				FADFA9CF2BFE458A00D56E0C /* FirstThreeScoreDelegate.swift in Sources */,
 				FA62FEAA2BE7605A00497CA3 /* CurrentUserPostTableViewCell.swift in Sources */,
@@ -635,10 +668,12 @@
 				FA781D962BE2631D009EBF41 /* EventDetailViewController.swift in Sources */,
 				FAA9B47A2BDE532B0027EC64 /* EventsViewController.swift in Sources */,
 				FAF5D8642BBB0917001759FD /* AppDelegate.swift in Sources */,
+				FA70DDAE2C03963000A5ECFF /* SystemImageName.swift in Sources */,
 				FAC5121E2BD9A78900B38B56 /* FireBaseStorageFolders.swift in Sources */,
 				FAEDD6032BCDBF3000E3F257 /* BaseViewModel.swift in Sources */,
 				FA8C29782BD839440007505C /* CustomUIImageView.swift in Sources */,
 				FA781D922BE108CC009EBF41 /* EventModel.swift in Sources */,
+				FA70DDB42C04A8F100A5ECFF /* FullScreenImageViewController.swift in Sources */,
 				FAC512112BD8510000B38B56 /* PostModel.swift in Sources */,
 				FA8C29722BD7C7AD0007505C /* UIColor+Extension.swift in Sources */,
 				FAEDD6212BD1B4A600E3F257 /* UserDetailModel.swift in Sources */,
@@ -671,6 +706,7 @@
 				FAEDD6082BCDC21600E3F257 /* FeedViewModel.swift in Sources */,
 				FAC5121A2BD864F000B38B56 /* UIImageView+Extension.swift in Sources */,
 				FAA0B8822BF6AD9600521027 /* LaunchCopyViewController.swift in Sources */,
+				FA70DDB72C04B53E00A5ECFF /* Date+Localize.swift in Sources */,
 				FA1A769A2BE2B016008C0315 /* UserProfileTableViewCell.swift in Sources */,
 				FAA9B47C2BDE53360027EC64 /* EventsViewModel.swift in Sources */,
 				FAEDD6182BCEC58500E3F257 /* AuthManager.swift in Sources */,

@@ -88,6 +88,7 @@ class BaseViewController<V: BaseViewModel>: UIViewController {
     func setPageLoadingAnimation() {
         self.gradientLoagingTabAnimation = CustomGradientLoadingAnimation(x: 0, y: 0, width: view.frame.width*0.8, height: 5, color: UIColor(named: "DetailButtonBackgroundColor") ?? .black)
         viewModel?.gradientLoagingTabAnimation = self.gradientLoagingTabAnimation
+        
         self.navigationController?.navigationBar.addSubview(gradientLoagingTabAnimation!)
     }
 }

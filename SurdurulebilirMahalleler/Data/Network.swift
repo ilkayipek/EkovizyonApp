@@ -12,6 +12,7 @@ import Foundation
 class Network {
     static let shared = Network()
     let database = Firestore.firestore()
+    let firestore = Firestore.self
     
     private init() {
         let settings = FirestoreSettings()
@@ -51,7 +52,7 @@ extension Network {
         }
     }
     
-    func getMany<T: Decodable>(of type: T.Type, with query: Query, completion: @escaping (Result<[T], Error>) -> Void) {
+    func getMany<T: FirebaseIdentifiable>(of type: T.Type, with query: Query, completion: @escaping (Result<[T], Error>) -> Void) {
         query.getDocuments { querySnapshot, error in
             if let error = error {
                 print("Error: couldn't access snapshot, \(error)")
@@ -79,6 +80,43 @@ extension Network {
             completion(.success(response))
         }
     }
+    
+    func getMany<T: FirebaseIdentifiable>(lastDoc: DocumentSnapshot? = nil, of type: T.Type, with query: Query, completion: @escaping (Result<([T], DocumentSnapshot?), Error>) -> Void) {
+        
+        var newQuery = query
+        if let lastDoc {
+            newQuery = newQuery.start(afterDocument: lastDoc)
+        }
+        
+        newQuery.getDocuments { querySnapshot, error in
+            if let error = error {
+                print("Error: couldn't access snapshot, \(error)")
+                completion(.failure(error))
+                return
+            }
+            
+            var response: [T] = []
+            guard let documents = querySnapshot?.documents else {
+                completion(.success((response, nil)))
+                return
+            }
+            
+            for document in documents {
+                do {
+                    let data = try document.data(as: T.self)
+                    response.append(data)
+                } catch let error {
+                    print("Error: \(#function) document(s) not decoded from data, \(error)")
+                    completion(.failure(error))
+                    return
+                }
+            }
+            
+            let lastDoc = documents.last
+            completion(.success((response, lastDoc)))
+        }
+    }
+
     
     func getDocument<T: Decodable>(reference: DocumentReference, completion: @escaping (Result<T, Error>) -> Void) {
         reference.getDocument { documentSnapshot, error in
@@ -163,4 +201,5 @@ extension Network {
             completion(.success(()))
         }
     }
+    
 }

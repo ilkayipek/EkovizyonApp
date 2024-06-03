@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrimaryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Rmi-gN-DJ6">
-                                <rect key="frame" x="9.6666666666666572" y="255.66666666666666" width="373.66666666666674" height="340.66666666666686"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="primary_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Rmi-gN-DJ6">
+                                <rect key="frame" x="9.6666666666666572" y="255.66666666666666" width="373.66666666666674" height="340.66666666666674"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -36,7 +36,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PrimaryIcon" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="primary_icon" width="166.66667175292969" height="166.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

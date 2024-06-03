@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 class SettingsViewController: BaseViewController<SettingsViewModel> {
     //MARK: VERRIABLES
@@ -33,6 +34,7 @@ class SettingsViewController: BaseViewController<SettingsViewModel> {
         configureTextFields()
         setUserDetail()
         setSaveButton()
+        addRecognizerToProfileImage()
     }
     
     // MARK: FUNCTIONS
@@ -97,6 +99,11 @@ class SettingsViewController: BaseViewController<SettingsViewModel> {
         view.addGestureRecognizer(gestureRecognizer)
     }
     
+    private func addRecognizerToProfileImage() {
+        let gestureRec = UITapGestureRecognizer(target: self, action: #selector(selectProfileImage))
+        profileImageView.addGestureRecognizer(gestureRec)
+    }
+    
     private func isEmptyTextFields() -> Bool {
         guard let name = fullNameTextField.text else {return true}
         guard let userName = usernameTextField.text else {return true}
@@ -119,6 +126,17 @@ class SettingsViewController: BaseViewController<SettingsViewModel> {
     }
     
     //MARK: OBJC FUNCTIONS
+    
+    @objc func selectProfileImage() {
+        var phpickerConfigure = PHPickerConfiguration()
+        phpickerConfigure.filter = .images
+        phpickerConfigure.selectionLimit = 1
+        
+        let pickerController = PHPickerViewController(configuration: phpickerConfigure)
+        pickerController.delegate = self
+        present(pickerController, animated: true)
+        
+    }
     
     @objc func saveUserDetail() {
         guard var newUserDetail = userDetail else {return}
@@ -196,5 +214,21 @@ extension SettingsViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+}
+
+extension SettingsViewController: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true)
+        
+        guard let provider = results.first?.itemProvider else {return}
+        
+        if provider.canLoadObject(ofClass: UIImage.self) {
+            provider.loadObject(ofClass: UIImage.self) { image, error in
+                if let image = image as? UIImage {
+                    self.profileImageView.image = image
+                }
+            }
+        }
     }
 }

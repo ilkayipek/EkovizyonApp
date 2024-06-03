@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = LaunchCopyViewController()
-         
+        window?.makeKeyAndVisible()
           if let currentUser = AuthManager.shared.auth.currentUser {
               AuthManager.shared.getCurrentUserDouments(userId: currentUser.uid) {[weak self] status, error in
                   guard let self else {return}
@@ -37,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //               }
 //           }
          
-//          let rootVc = ScoresViewController()
+//          let rootVc = FeedViewController()
 //          let navigationVc = UINavigationController(rootViewController: rootVc)
 //          window?.rootViewController = navigationVc
 //          window?.makeKeyAndVisible()
@@ -46,8 +46,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func transitToTabBarVc() {
-        let tabBar = TabBarViewController()
+        let tabBar = TabBarViewController.loadFromNib()
         let rootVc = UINavigationController(rootViewController: tabBar)
+        
         window?.rootViewController = rootVc
         window?.makeKeyAndVisible()
     }

@@ -36,6 +36,7 @@ class SignInViewController: BaseViewController<SignInViewModel> {
         }
     }
     @IBAction func iForgetMyPasswordButtonClicked(_ sender: Any) {
+        viewModel?.forgetMyPassword(epostaTextField.text)
     }
     
     func checkIsEmptyTextfields() -> Bool{
