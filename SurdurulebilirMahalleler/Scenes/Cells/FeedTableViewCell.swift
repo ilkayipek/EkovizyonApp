@@ -12,6 +12,7 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var profileImageView: CustomUIImageView!
+    @IBOutlet weak var timeAgoLabel: UILabel!
     @IBOutlet weak var contentImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var commentsButton: UIButton!
@@ -35,6 +36,7 @@ class FeedTableViewCell: UITableViewCell {
         contentLabel.text = postModel.contentText
         likeButton.setTitle("\(postModel.totalLike)", for: .normal)
         commentsButton.setTitle("\(postModel.totalComment)", for: .normal)
+        timeAgoLabel.text = postModel.timestamp.timeAgo(locadeId: .tr, unitStyle: .short)
        
         loadImages(profileUrl: userModel.profileUrl, contentUrl: postModel.contentImageUrl)
         loadLikeButton(likeId: postModel.postLikeId)
@@ -83,15 +85,14 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     @objc func contentTextClicked() {
-        if !contentTextToggle {
-            contentLabel.numberOfLines = 0
-            contentTextToggle = true
-        } else {
-            contentLabel.numberOfLines = 3
-            contentTextToggle = false
-        }
         
-        feedDelegate?.cellReloadSize(self)
+        contentTextToggle.toggle()
+        contentLabel.numberOfLines = contentTextToggle ? 0 : 3
+        
+        if let tableView = self.superview as? UITableView {
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
     }
     
     @objc func imageSelected() {
