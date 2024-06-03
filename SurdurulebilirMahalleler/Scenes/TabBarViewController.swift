@@ -23,13 +23,13 @@ class TabBarViewController: UITabBarController {
         let eventsVc = EventsViewController()
         let profileVc = CurrentUserProfileViewController()
         
+        
         let shadowView = UIView(frame: tabBar.bounds)
         shadowView.backgroundColor = .white
         shadowView.layer.shadowColor = UIColor.black.cgColor
         shadowView.layer.shadowOpacity = 0.1
         shadowView.layer.shadowOffset = CGSize(width: 0, height: -3)
         shadowView.layer.shadowRadius = 3
-        
         
         tabBar.insertSubview(shadowView, at: 0)
         
@@ -46,7 +46,6 @@ class TabBarViewController: UITabBarController {
         profileVc.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
         
         setViewControllers([homeVc,mapVc,pointsVc,eventsVc,profileVc], animated: true)
-        
         
     }
 }
