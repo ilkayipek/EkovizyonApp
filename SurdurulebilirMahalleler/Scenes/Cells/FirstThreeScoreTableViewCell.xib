@@ -22,7 +22,7 @@
                         <rect key="frame" x="5" y="5" width="539" height="298"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J4f-QI-aG9">
-                                <rect key="frame" x="16.666666666666671" y="50" width="168.66666666666663" height="100"/>
+                                <rect key="frame" x="16.666666666666671" y="50" width="168.66666666666663" height="160"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secont_score" translatesAutoresizingMaskIntoConstraints="NO" id="ckB-R6-sEf">
                                         <rect key="frame" x="34.333333333333329" y="0.0" width="99.999999999999986" height="100"/>
@@ -31,10 +31,10 @@
                                             <constraint firstAttribute="height" constant="100" id="4iL-YZ-WAe"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jhe-WA-lwY">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jhe-WA-lwY">
                                         <rect key="frame" x="39.333333333333329" y="100" width="89.999999999999986" height="60"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bw1-hO-idA">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="bw1-hO-idA">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="UEh-oB-m23">
@@ -58,7 +58,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nmS-gH-9RJ">
                                                                 <rect key="frame" x="33" y="1.3333333333333428" width="57" height="28.666666666666668"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ilkay ipek" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KK-CG-MAd">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ilkay ipek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KK-CG-MAd">
                                                                         <rect key="frame" x="0.0" y="0.0" width="57" height="14.333333333333334"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                                         <nil key="textColor"/>
