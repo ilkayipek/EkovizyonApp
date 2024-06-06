@@ -14,6 +14,7 @@ import Firebase
 class AuthManager {
     static let shared = AuthManager()
     let auth = Auth.auth()
+    let emailAuthProvider = EmailAuthProvider.self
     
     private init() {
     }
