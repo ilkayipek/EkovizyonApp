@@ -200,6 +200,9 @@
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Şifre Güncelle"/>
+                                    <connections>
+                                        <action selector="passwordChangeButtonClicked:" destination="-1" eventType="touchUpInside" id="KXI-OG-j86"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="car-TB-yjN" customClass="CustomUIButton" customModule="SurdurulebilirMahalleler">
                                     <rect key="frame" x="0.0" y="586.66666666666663" width="373.66666666666669" height="35"/>
