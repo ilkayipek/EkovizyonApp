@@ -186,6 +186,13 @@ class SettingsViewController: BaseViewController<SettingsViewModel> {
         scrollView.contentInset = .zero
     }
     
+    //MARK: IBAction functions
+    
+    @IBAction func passwordChangeButtonClicked(_ sender: Any) {
+        let targetVc = PasswordChangeViewController.loadFromNib()
+        self.navigationController?.pushViewController(targetVc, animated: true)
+    }
+    
     @IBAction func deleteAccountButtonClicked(_ sender: Any) {
         alertMessageDefault("UYARI!", "Hesabınızı Silmek İstediğinize Emin Misiniz ?", "Sil") {[weak self] _ in
             guard let self else {return}
