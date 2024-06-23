@@ -24,6 +24,7 @@ class BaseViewController<V: BaseViewModel>: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         gradientLoagingTabAnimation?.stopAnimations()
+        loadingAnimationStop()
     }
     
     func setViewModel() {
