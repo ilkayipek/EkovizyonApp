@@ -18,7 +18,6 @@ class TabBarViewController: UITabBarController {
     func addTabItems() {
         
         let homeVc = FeedViewController()
-        let mapVc = FeedViewController()
         let pointsVc = ScoresViewController()
         let eventsVc = EventsViewController()
         let profileVc = CurrentUserProfileViewController()
@@ -36,16 +35,14 @@ class TabBarViewController: UITabBarController {
         
         homeVc.tabBarItem = UITabBarItem(title: "Ana sayfa", image: UIImage(systemName: "house"), tag: 0)
         homeVc.tabBarItem.selectedImage = UIImage(systemName: "house.fill")
-        mapVc.tabBarItem = UITabBarItem(title: "Harita", image: UIImage(systemName: "map"), tag: 1)
-        mapVc.tabBarItem.selectedImage = UIImage(systemName: "map.fill")
-        pointsVc.tabBarItem = UITabBarItem(title: "Skor", image: UIImage(systemName: "list.bullet.clipboard"), tag: 2)
+        pointsVc.tabBarItem = UITabBarItem(title: "Skor", image: UIImage(systemName: "list.bullet.clipboard"), tag: 1)
         pointsVc.tabBarItem.selectedImage = UIImage(systemName: "list.bullet.clipboard.fill")
-        eventsVc.tabBarItem = UITabBarItem(title: "Etkinlikler", image: UIImage(systemName: "calendar"), tag: 3)
+        eventsVc.tabBarItem = UITabBarItem(title: "Etkinlikler", image: UIImage(systemName: "calendar"), tag: 2)
         eventsVc.tabBarItem.selectedImage = UIImage(systemName: "calendar")
-        profileVc.tabBarItem = UITabBarItem(title: "Profil", image: UIImage(systemName: "person"), tag: 4)
+        profileVc.tabBarItem = UITabBarItem(title: "Profil", image: UIImage(systemName: "person"), tag: 3)
         profileVc.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
         
-        setViewControllers([homeVc,mapVc,pointsVc,eventsVc,profileVc], animated: true)
+        setViewControllers([homeVc,pointsVc,eventsVc,profileVc], animated: true)
         
     }
 }
