@@ -33,6 +33,7 @@
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gm0-be-Ig3" customClass="CustomUITextField" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="56" width="373" height="36"/>
                             <color key="backgroundColor" name="LabelBackgroung"/>
+                            <color key="textColor" name="ContainerBackground"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits" textContentType="email"/>
                             <userDefinedRuntimeAttributes>
@@ -47,6 +48,7 @@
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pw-ZG-AfG" customClass="CustomUITextField" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="112" width="373" height="36"/>
                             <color key="backgroundColor" name="LabelBackgroung"/>
+                            <color key="textColor" name="ContainerBackground"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             <userDefinedRuntimeAttributes>
@@ -90,7 +92,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="373" height="35.333333333333336"/>
                             <color key="backgroundColor" name="ButtonBackground"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="googleIcon" title=" Google ile devam et" subtitle="">
+                            <buttonConfiguration key="configuration" style="plain" image="google_icon" title=" Google ile devam et" subtitle="">
                                 <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
                                 <color key="baseForegroundColor" name="PrimaryText"/>
                             </buttonConfiguration>
@@ -151,12 +153,15 @@
         </designable>
     </designables>
     <resources>
-        <image name="googleIcon" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="google_icon" width="21.333333969116211" height="21.333333969116211"/>
         <namedColor name="ActiveButtonColor">
             <color red="0.2669999897480011" green="0.57599997520446777" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="ButtonBackground">
             <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ContainerBackground">
+            <color red="0.50134384629999995" green="0.62151795629999995" blue="0.7603952289" alpha="0.23631519039735099" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LabelBackgroung">
             <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
