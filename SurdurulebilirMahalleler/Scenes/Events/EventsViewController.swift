@@ -13,9 +13,14 @@ class EventsViewController: BaseViewController<EventsViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.title = "Etkinlikler"
         viewModel = EventsViewModel()
         configureEventsTableView()
         getEvents()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.title = "Etkinlikler"
     }
     
     private func configureEventsTableView() {
