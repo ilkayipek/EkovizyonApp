@@ -25,6 +25,10 @@ class FeedViewController: BaseViewController<FeedViewModel> {
         self.tabBarController?.title = ""
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.title = "Ana Sayfa"
+    }
+    
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -53,10 +57,8 @@ class FeedViewController: BaseViewController<FeedViewModel> {
     }
     
     private func getAfterPosts() {
-        gradientLoagingTabAnimation?.startAnimations()
         viewModel?.getAfterPosts(){ [weak self] posts in
             guard let self else {return}
-            self.gradientLoagingTabAnimation?.stopAnimations()
             guard let posts else {
                 self.tableView.reloadData()
                 return
@@ -114,6 +116,13 @@ extension FeedViewController: HomeFeedDelegate {
     }
     
     func userSelected(_ userId: String) {
+        guard userId != AuthManager.shared.auth.currentUser?.uid else {
+            if let tabBar = self.tabBarController {
+                tabBar.selectedIndex = 3
+            }
+            return
+        }
+        
         let targetVc = UserProfileViewController.loadFromNib()
         targetVc.userId = userId
         self.navigationController?.pushViewController(targetVc, animated: true)
