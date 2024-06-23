@@ -26,7 +26,7 @@ class CurrentUserProfileViewController: BaseViewController<CurrentUserProfileVie
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.tabBarController?.title = ""
+        
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
     }
     
