@@ -127,11 +127,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="tXw-Je-gLq">
                                         <rect key="frame" x="0.0" y="180" width="425" height="62.666666666666657"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gQ4-BS-TAg">
-                                                <rect key="frame" x="0.0" y="0.0" width="205.66666666666666" height="62.666666666666664"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gQ4-BS-TAg">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="62.666666666666664"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a67-ry-Imt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="205.66666666666666" height="34.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Konum Ziyareti" subtitle="">
                                                             <imageReference key="image" image="location.fill" catalog="system" symbolScale="medium"/>
@@ -139,7 +139,7 @@
                                                         </buttonConfiguration>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TG7-aF-lCv">
-                                                        <rect key="frame" x="0.0" y="42.333333333333314" width="205.66666666666666" height="20.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="42.333333333333314" width="0.0" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -147,10 +147,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FbP-SP-iP8">
-                                                <rect key="frame" x="219.66666666666663" y="0.0" width="205.33333333333337" height="62.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="425" height="62.666666666666664"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkD-cb-aex">
-                                                        <rect key="frame" x="0.0" y="0.0" width="205.33333333333334" height="34.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="425" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Etkinlik Katılımı">
                                                             <imageReference key="image" image="calendar.circle" catalog="system" symbolScale="medium"/>
@@ -158,7 +158,7 @@
                                                         </buttonConfiguration>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF4-Ww-efP">
-                                                        <rect key="frame" x="0.0" y="42.333333333333314" width="205.33333333333334" height="20.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="42.333333333333314" width="425" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -216,7 +216,7 @@
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="person" width="94" height="94"/>
         <namedColor name="ContainerBackground">
-            <color red="0.93699997663497925" green="0.95300000905990601" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.50134384629999995" green="0.62151795629999995" blue="0.7603952289" alpha="0.23631519039735099" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
