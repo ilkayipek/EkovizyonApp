@@ -22,8 +22,9 @@ class ScoresViewController: BaseViewController<ScoresViewModel> {
         getSceneData()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        self.tabBarController?.title = ""
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.title = "Skor"
     }
     
     private func configureTableView() {
@@ -56,7 +57,7 @@ class ScoresViewController: BaseViewController<ScoresViewModel> {
     private func transitToUserDetail(_ userId: String) {
         guard userId != AuthManager.shared.auth.currentUser?.uid else {
             if let tabBar = self.tabBarController {
-                tabBar.selectedIndex = 4
+                tabBar.selectedIndex = 3
             }
             return
         }
