@@ -62,7 +62,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="CiR-RD-5B8" customClass="CustomUIImageView" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="CiR-RD-5B8" customClass="CustomUIImageView" customModule="SurdurulebilirMahalleler" customModuleProvider="target">
                                 <rect key="frame" x="72.666666666666671" y="15" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FK2-z3-PTC"/>
